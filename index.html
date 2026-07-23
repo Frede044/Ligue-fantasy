@@ -134,7 +134,8 @@ let admin = false;
 let ongletActif = "classement";
 let semaine = 1;
 let brouillon = {};       // saisie en cours {t:{pts,games}}
-let chargeInitiale = false;
+let premierChargement = false;
+let semaineInitialisee = false;
 
 const r2 = x => Math.round(x*100)/100;
 const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
@@ -193,9 +194,13 @@ function classement(){
 
 /* ---------------- Firestore ---------------- */
 DOC.onSnapshot(snap=>{
-  data = snap.exists ? snap.data() : null;
-  if(data && !chargeInitiale){
-    chargeInitiale=true;
+  const brut = snap.exists ? snap.data() : null;
+  data = brut
+    ? {...brut, schedule: brut.scheduleJson ? JSON.parse(brut.scheduleJson) : (brut.schedule||[])}
+    : null;
+  premierChargement = true;
+  if(data && !semaineInitialisee){
+    semaineInitialisee=true;
     for(let w=1;w<=data.weeksCount;w++){
       const ok=(data.schedule[w-1]||[]).every(([a,b])=>data.weeks[w]&&data.weeks[w][a]&&data.weeks[w][b]);
       if(!ok){ semaine=w; break; }
