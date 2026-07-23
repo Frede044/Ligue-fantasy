@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duels de la ligue — Blais/Gleeton Fantasy</title>
+<style>
+  :root{
+    --glace:#0B1220; --bande:#131D2D; --bande2:#182640; --ligne:#233450;
+    --bleu:#4A8FE7; --rouge:#E0524A; --lumiere:#F5B841; --texte:#E9EEF6;
+    --sourd:#8CA0BB; --vert:#5BC98B;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:linear-gradient(180deg,var(--glace) 0%,#0D1626 100%);
+    min-height:100vh; color:var(--texte);
+    font-family:system-ui,-apple-system,'Segoe UI',sans-serif;
+    padding-bottom:56px;
+  }
+  header{padding:26px 16px 16px; text-align:center; border-bottom:1px solid var(--ligne);}
+  .eyebrow{font-size:11px; letter-spacing:.35em; color:var(--lumiere); font-weight:700; text-transform:uppercase;}
+  h1{font-size:29px; font-weight:900; letter-spacing:-.01em; margin-top:6px;}
+  .adminbar{margin-top:10px; font-size:12px; color:var(--sourd);}
+  .adminbar button{background:none; border:none; color:var(--bleu); cursor:pointer; font-size:12px; text-decoration:underline;}
+  nav{display:flex; gap:6px; justify-content:center; padding:14px 12px; flex-wrap:wrap;}
+  nav button{
+    padding:8px 16px; border-radius:999px; font-size:14px; font-weight:700; cursor:pointer;
+    background:transparent; color:var(--sourd); border:1px solid var(--ligne);
+  }
+  nav button.actif{background:var(--bande2); color:var(--texte); border-color:var(--bleu);}
+  main{max-width:680px; margin:0 auto; padding:4px 12px;}
+  .carte{background:var(--bande); border:1px solid var(--ligne); border-radius:12px;}
+  .carte + .carte{margin-top:10px;}
+  table{width:100%; border-collapse:collapse; font-size:14px;}
+  th{color:var(--sourd); font-size:12px; text-transform:uppercase; letter-spacing:.06em; font-weight:600; padding:10px 12px; border-bottom:1px solid var(--ligne);}
+  td{padding:11px 12px; border-bottom:1px solid var(--ligne);}
+  tr:last-child td{border-bottom:none;}
+  .num{font-variant-numeric:tabular-nums; text-align:right;}
+  .duelpts{color:var(--lumiere); font-weight:800;}
+  .sourd{color:var(--sourd);}
+  .note{padding:10px 12px; font-size:12px; color:var(--sourd); border-top:1px solid var(--ligne);}
+  .semaine-nav{display:flex; align-items:center; justify-content:center; gap:14px; margin:2px 0 14px;}
+  .semaine-nav button{width:34px; height:34px; border-radius:8px; background:var(--bande); border:1px solid var(--ligne); color:var(--texte); cursor:pointer; font-size:16px;}
+  .semaine-nav .titre{font-weight:900; font-size:16px;}
+  .semaine-nav .titre b{color:var(--lumiere); font-variant-numeric:tabular-nums;}
+  .duel{padding:14px 16px;}
+  .duel .noms{display:flex; justify-content:space-between; gap:10px; font-weight:800;}
+  .duel .scores{display:flex; justify-content:space-between; align-items:center; margin-top:6px;}
+  .duel .ppm{font-family:ui-monospace,Consolas,monospace; font-size:22px; font-weight:800; font-variant-numeric:tabular-nums;}
+  .duel .detail{display:flex; justify-content:space-between; margin-top:4px; font-size:12px; color:var(--sourd); font-variant-numeric:tabular-nums;}
+  .chip{border-radius:999px; padding:2px 10px; font-size:12px; font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; border:1px solid var(--ligne); color:var(--sourd);}
+  .chip.gagne{background:rgba(245,184,65,.14); color:var(--lumiere); border-color:rgba(245,184,65,.4);}
+  .chip.egal{background:rgba(74,143,231,.14); color:var(--bleu); border-color:rgba(74,143,231,.4);}
+  .pad{padding:16px;}
+  label{display:block; font-size:13px; color:var(--sourd); margin:14px 0 6px;}
+  input,textarea{
+    background:var(--glace); border:1px solid var(--ligne); color:var(--texte);
+    border-radius:6px; padding:8px 10px; font-size:14px; width:100%; outline:none; font-family:inherit;
+  }
+  textarea.mono{font-family:ui-monospace,Consolas,monospace; font-size:13px;}
+  input:focus,textarea:focus,button:focus-visible{outline:2px solid var(--bleu); outline-offset:1px;}
+  .grille-saisie{display:grid; grid-template-columns:1fr 88px 88px; gap:8px; align-items:center; margin-top:8px;}
+  .grille-saisie .entete{font-size:12px; color:var(--sourd); text-transform:uppercase; letter-spacing:.05em;}
+  .btn{
+    margin-top:16px; width:100%; padding:12px 16px; border-radius:8px;
+    background:var(--lumiere); color:#20180A; font-weight:800; font-size:15px; border:none; cursor:pointer;
+  }
+  .btn.secondaire{background:var(--bande2); color:var(--texte); border:1px solid var(--bleu); width:auto; padding:8px 14px; font-size:13px; margin-top:8px;}
+  .btn.danger{background:var(--rouge); color:#fff; width:auto; padding:6px 12px; font-size:13px; margin-top:0;}
+  .msg{font-size:13px; margin-top:10px;}
+  .msg.ok{color:var(--vert);}
+  .msg.err{color:var(--rouge);}
+  .centre{text-align:center;}
+  .cal-entete{display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;}
+  .cal-paires{display:grid; gap:4px; font-size:13px; color:var(--sourd);}
+  dialog{
+    background:var(--bande); color:var(--texte); border:1px solid var(--ligne);
+    border-radius:12px; padding:20px; max-width:340px; width:90%;
+  }
+  dialog::backdrop{background:rgba(5,9,16,.7);}
+  @media (prefers-reduced-motion: no-preference){
+    .duel{transition:border-color .2s;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Victoire 10 · Égalité 5 · Points par match</div>
+  <h1>Duels de la ligue</h1>
+  <div class="adminbar" id="adminbar"></div>
+</header>
+
+<nav id="nav"></nav>
+<p class="centre msg" id="msg-global"></p>
+<main id="app"><p class="centre sourd" style="padding:30px 0">Chargement du tableau…</p></main>
+
+<dialog id="dlg-connexion">
+  <h2 style="font-size:17px; margin-bottom:4px;">Connexion admin</h2>
+  <p class="sourd" style="font-size:13px;">Réservé au commissaire — même compte que tes autres pages.</p>
+  <label>Courriel</label>
+  <input id="login-email" type="email" autocomplete="email">
+  <label>Mot de passe</label>
+  <input id="login-pass" type="password" autocomplete="current-password">
+  <p class="msg err" id="login-err"></p>
+  <button class="btn" onclick="connecter()">Se connecter</button>
+  <button class="btn secondaire" style="width:100%" onclick="document.getElementById('dlg-connexion').close()">Annuler</button>
+</dialog>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+/* ============================================================
+   CONFIGURATION — colle ici le même bloc firebaseConfig que
+   dans ton site Alliance Dek (les valeurs apiKey, authDomain,
+   projectId, etc. de TON projet Firebase).
+   ============================================================ */
+const firebaseConfig = {
+  apiKey: "COLLE-TA-CLE-ICI",
+  authDomain: "TON-PROJET.firebaseapp.com",
+  projectId: "TON-PROJET",
+  storageBucket: "TON-PROJET.appspot.com",
+  messagingSenderId: "000000000000",
+  appId: "1:000000000000:web:xxxxxxxxxxxx"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const auth = firebase.auth();
+const DOC = db.collection("duels").doc("tableau");
+
+/* ---------------- état ---------------- */
+let data = null;          // {teams, weeksCount, schedule, weeks:{}, baseline:{}}
+let admin = false;
+let ongletActif = "classement";
+let semaine = 1;
+let brouillon = {};       // saisie en cours {t:{pts,games}}
+let chargeInitiale = false;
+
+const r2 = x => Math.round(x*100)/100;
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+/* ---------------- calendrier round-robin ---------------- */
+function genererCalendrier(nEquipes, nSemaines){
+  const ids=[...Array(nEquipes).keys()];
+  const fixe=ids[0]; let reste=ids.slice(1); const rondes=[];
+  for(let r=0;r<nEquipes-1;r++){
+    const anneau=[fixe,...reste]; const paires=[];
+    for(let i=0;i<nEquipes/2;i++) paires.push([anneau[i],anneau[nEquipes-1-i]]);
+    rondes.push(paires);
+    reste=[reste[reste.length-1],...reste.slice(0,reste.length-1)];
+  }
+  return [...Array(nSemaines).keys()].map(w=>rondes[w%rondes.length]);
+}
+
+/* ---------------- calculs ---------------- */
+function releveAvant(w,t){
+  for(let i=w-1;i>=1;i--){ const e=data.weeks[i]&&data.weeks[i][t]; if(e) return e; }
+  return (data.baseline&&data.baseline[t])||{pts:0,games:0};
+}
+function resultatsSemaine(w){
+  return (data.schedule[w-1]||[]).map(([a,b])=>{
+    const ea=data.weeks[w]&&data.weeks[w][a], eb=data.weeks[w]&&data.weeks[w][b];
+    if(!ea||!eb) return {a,b,attente:true};
+    const pa=releveAvant(w,a), pb=releveAvant(w,b);
+    const dA={pts:ea.pts-pa.pts, games:ea.games-pa.games};
+    const dB={pts:eb.pts-pb.pts, games:eb.games-pb.games};
+    const ppmA=dA.games>0?r2(dA.pts/dA.games):0;
+    const ppmB=dB.games>0?r2(dB.pts/dB.games):0;
+    let sA=0,sB=0;
+    if(ppmA>ppmB) sA=10; else if(ppmB>ppmA) sB=10; else {sA=5;sB=5;}
+    return {a,b,attente:false,dA,dB,ppmA,ppmB,sA,sB};
+  });
+}
+function classement(){
+  const lignes=data.teams.map((_,t)=>({t,duel:0,v:0,e:0,d:0}));
+  for(let w=1;w<=data.weeksCount;w++){
+    for(const m of resultatsSemaine(w)){
+      if(m.attente) continue;
+      const A=lignes[m.a],B=lignes[m.b];
+      A.duel+=m.sA; B.duel+=m.sB;
+      if(m.sA===10){A.v++;B.d++;} else if(m.sB===10){B.v++;A.d++;} else {A.e++;B.e++;}
+    }
+  }
+  for(const l of lignes){
+    let dernier=null;
+    for(let w=data.weeksCount;w>=1;w--){ const e=data.weeks[w]&&data.weeks[w][l.t]; if(e){dernier=e;break;} }
+    if(!dernier) dernier=(data.baseline&&data.baseline[l.t])||null;
+    l.saison=dernier?dernier.pts:0;
+  }
+  return lignes.sort((x,y)=>y.duel-x.duel||y.saison-x.saison);
+}
+
+/* ---------------- Firestore ---------------- */
+DOC.onSnapshot(snap=>{
+  data = snap.exists ? snap.data() : null;
+  if(data && !chargeInitiale){
+    chargeInitiale=true;
+    for(let w=1;w<=data.weeksCount;w++){
+      const ok=(data.schedule[w-1]||[]).every(([a,b])=>data.weeks[w]&&data.weeks[w][a]&&data.weeks[w][b]);
+      if(!ok){ semaine=w; break; }
+      if(w===data.weeksCount) semaine=w;
+    }
+  }
+  rendre();
+}, err=>{
+  message("Impossible de charger les données. Vérifie la configuration Firebase et les règles Firestore.", true);
+});
+
+auth.onAuthStateChanged(u=>{ admin=!!u; rendre(); });
+
+async function sauvegarder(nouveau){
+  try{
+    await DOC.set(nouveau);
+    message("Enregistré — visible par toute la ligue.", false);
+  }catch(e){
+    message("La sauvegarde a échoué. Es-tu connecté en admin? (règles Firestore : écriture réservée aux comptes connectés)", true);
+  }
+}
+
+/* ---------------- connexion ---------------- */
+function connecter(){
+  const email=document.getElementById("login-email").value.trim();
+  const pass=document.getElementById("login-pass").value;
+  document.getElementById("login-err").textContent="";
+  auth.signInWithEmailAndPassword(email,pass)
+    .then(()=>document.getElementById("dlg-connexion").close())
+    .catch(()=>document.getElementById("login-err").textContent="Courriel ou mot de passe refusé.");
+}
+function deconnecter(){ auth.signOut(); }
+
+/* ---------------- collage ESPN ---------------- */
+function appliquerCollage(){
+  const zone=document.getElementById("zone-collage");
+  const lignes=zone.value.split("\n").map(l=>l.trim()).filter(Boolean);
+  let reconnues=0, modeESPN=false;
+  for(const ligne of lignes){
+    const nombres=ligne.match(/-?\d+(?:[.,]\d+)?/g);
+    if(!nombres||nombres.length<1) continue;
+    let pts=null, games=null;
+    if(nombres.length>=10){
+      /* rangée du classement ESPN : …, OTL, TOT, CHG → TOT = avant-dernier */
+      pts=parseFloat(nombres[nombres.length-2].replace(",","."));
+      modeESPN=true;
+    }else if(nombres.length>=2){
+      games=parseInt(nombres[nombres.length-1]);
+      pts=parseFloat(nombres[nombres.length-2].replace(",","."));
+    }else{
+      pts=parseFloat(nombres[0].replace(",","."));
+    }
+    /* reconnaissance même avec noms tronqués par ESPN (« … ») */
+    const ln=norm(ligne);
+    let meilleur=-1, longueur=0;
+    data.teams.forEach((nom,t)=>{
+      const nn=norm(nom); if(!nn) return;
+      let k=nn.length;
+      while(k>=6 && !ln.includes(nn.slice(0,k))) k--;
+      if(k>=6 && k>longueur){ meilleur=t; longueur=k; }
+    });
+    if(meilleur>=0 && pts!==null && !isNaN(pts)){
+      const prec=brouillon[meilleur]||{pts:"",games:""};
+      brouillon[meilleur]={pts:String(pts), games:(games!==null&&!isNaN(games))?String(games):prec.games};
+      reconnues++;
+    }
+  }
+  const m=document.getElementById("msg-collage");
+  if(reconnues>0){
+    m.className="msg ok";
+    m.textContent=reconnues+" équipe(s) reconnue(s)."+(modeESPN?" Points remplis depuis ESPN — il reste à entrer les matchs utilisés.":"");
+  }else{
+    m.className="msg err";
+    m.textContent="Aucune équipe reconnue. Colle les rangées du classement ESPN, ou : nom, points, matchs.";
+  }
+  rendreSaisieChamps();
+}
+
+/* ---------------- saisie ---------------- */
+function chargerBrouillon(w){
+  brouillon={};
+  data.teams.forEach((_,t)=>{
+    const e=data.weeks[w]&&data.weeks[w][t];
+    brouillon[t]=e?{pts:String(e.pts),games:String(e.games)}:{pts:"",games:""};
+  });
+}
+function majBrouillon(t,champ,val){ brouillon[t][champ]=val; }
+function enregistrerSemaine(){
+  const entree={}; let remplies=0;
+  data.teams.forEach((_,t)=>{
+    const b=brouillon[t]||{pts:"",games:""};
+    if(b.pts!==""&&b.games!==""){
+      entree[t]={pts:parseFloat(String(b.pts).replace(",","."))||0, games:parseInt(b.games)||0};
+      remplies++;
+    }
+  });
+  if(remplies===0){ message("Aucune donnée à enregistrer pour cette semaine.", true); return; }
+  const nouveau={...data, weeks:{...data.weeks, [semaine]:entree}};
+  sauvegarder(nouveau);
+  ongletActif="semaine";
+}
+
+/* ---------------- création ---------------- */
+function creerTableau(){
+  const noms=document.getElementById("setup-noms").value.split("\n").map(s=>s.trim()).filter(Boolean);
+  const nSem=Math.max(1,Math.min(40,parseInt(document.getElementById("setup-semaines").value)||26));
+  if(noms.length<2||noms.length%2!==0){ message("Entre un nombre pair d'équipes (une par ligne).", true); return; }
+  sauvegarder({teams:noms, weeksCount:nSem, schedule:genererCalendrier(noms.length,nSem), baseline:{}, weeks:{}});
+}
+function reinitialiser(){
+  if(!confirm("Effacer TOUT le tableau des duels pour toute la ligue?")) return;
+  DOC.delete().then(()=>message("Tableau effacé.", false))
+    .catch(()=>message("Suppression refusée — connecte-toi en admin.", true));
+}
+
+/* ---------------- rendu ---------------- */
+function message(txt, erreur){
+  const m=document.getElementById("msg-global");
+  m.className="centre msg "+(erreur?"err":"ok");
+  m.textContent=txt;
+  if(!erreur) setTimeout(()=>{ if(m.textContent===txt) m.textContent=""; },4000);
+}
+
+function rendre(){
+  /* barre admin */
+  document.getElementById("adminbar").innerHTML = admin
+    ? 'Mode admin · <button onclick="deconnecter()">Se déconnecter</button>'
+    : '<button onclick="document.getElementById(\'dlg-connexion\').showModal()">Connexion admin</button>';
+
+  /* onglets */
+  const onglets=[["classement","Classement"],["semaine","Duels"],["calendrier","Calendrier"]];
+  if(admin) onglets.push(["saisie","Saisie"]);
+  if(ongletActif==="saisie"&&!admin) ongletActif="classement";
+  document.getElementById("nav").innerHTML=onglets.map(([id,lbl])=>
+    '<button class="'+(ongletActif===id?"actif":"")+'" onclick="allerA(\''+id+'\')">'+lbl+'</button>').join("");
+
+  const app=document.getElementById("app");
+
+  if(data===null && !chargeInitiale){ return; } /* en attente du premier snapshot */
+
+  if(!data){
+    app.innerHTML = admin ? `
+      <div class="carte pad">
+        <h2 style="font-size:18px;">Créer le tableau</h2>
+        <p class="sourd" style="font-size:14px; margin-top:4px;">Le calendrier des duels est généré automatiquement — chacun affronte chacun, en rotation.</p>
+        <label>Équipes — une par ligne</label>
+        <textarea id="setup-noms" rows="10" placeholder="Eagles on ice de l'Artique&#10;Brochet du Castagnier&#10;…"></textarea>
+        <label>Nombre de semaines de duels</label>
+        <input id="setup-semaines" value="26" inputmode="numeric" style="max-width:120px;">
+        <button class="btn" onclick="creerTableau()">Créer le tableau</button>
+      </div>`
+      : '<div class="carte pad centre sourd">Le tableau des duels n\'est pas encore configuré. Le commissaire doit se connecter pour le créer.</div>';
+    return;
+  }
+
+  if(ongletActif==="classement") rendreClassement(app);
+  else if(ongletActif==="semaine") rendreSemaine(app);
+  else if(ongletActif==="calendrier") rendreCalendrier(app);
+  else if(ongletActif==="saisie") rendreSaisie(app);
+}
+
+function allerA(id){
+  ongletActif=id;
+  if(id==="saisie") chargerBrouillon(semaine);
+  rendre();
+}
+function changerSemaine(delta){
+  semaine=Math.max(1,Math.min(data.weeksCount,semaine+delta));
+  if(ongletActif==="saisie") chargerBrouillon(semaine);
+  rendre();
+}
+
+function barreSemaine(){
+  return '<div class="semaine-nav">'+
+    '<button onclick="changerSemaine(-1)" aria-label="Semaine précédente">‹</button>'+
+    '<span class="titre">Semaine <b>'+semaine+'</b><span class="sourd" style="font-weight:600"> / '+data.weeksCount+'</span></span>'+
+    '<button onclick="changerSemaine(1)" aria-label="Semaine suivante">›</button></div>';
+}
+
+function rendreClassement(app){
+  const lignes=classement();
+  app.innerHTML='<div class="carte"><table><thead><tr>'+
+    '<th style="text-align:left">Équipe</th><th class="num">Duels</th><th class="num">V-É-D</th><th class="num">Pts saison</th>'+
+    '</tr></thead><tbody>'+
+    lignes.map((l,i)=>'<tr>'+
+      '<td style="font-weight:'+(i===0?800:600)+'"><span class="sourd num" style="margin-right:10px">'+(i+1)+'</span>'+esc(data.teams[l.t])+
+      (i===0&&l.duel>0?' <span style="color:var(--lumiere)">●</span>':'')+'</td>'+
+      '<td class="num duelpts">'+l.duel+'</td>'+
+      '<td class="num sourd">'+l.v+'-'+l.e+'-'+l.d+'</td>'+
+      '<td class="num sourd">'+(l.saison?l.saison.toLocaleString("fr-CA"):"—")+'</td>'+
+    '</tr>').join("")+
+    '</tbody></table><p class="note">« Duels » s\'ajoute au total de saison à la fin de l\'année. Départage : points de saison.</p></div>';
+}
+
+function rendreSemaine(app){
+  const res=resultatsSemaine(semaine);
+  app.innerHTML=barreSemaine()+res.map(m=>{
+    if(m.attente){
+      return '<div class="carte duel"><div class="noms"><span>'+esc(data.teams[m.a])+'</span>'+
+        '<span class="chip">à venir</span><span style="text-align:right">'+esc(data.teams[m.b])+'</span></div></div>';
+    }
+    const chip=m.sA===m.sB?'<span class="chip egal">5 – 5</span>':
+      '<span class="chip gagne">'+(m.sA===10?"10 – 0":"0 – 10")+'</span>';
+    const cA=m.sA===10?"var(--lumiere)":m.sA===5?"var(--bleu)":"var(--sourd)";
+    const cB=m.sB===10?"var(--lumiere)":m.sB===5?"var(--bleu)":"var(--sourd)";
+    return '<div class="carte duel">'+
+      '<div class="noms"><span style="color:'+(m.sA>=m.sB?"var(--texte)":"var(--sourd)")+'">'+esc(data.teams[m.a])+'</span>'+
+      '<span style="text-align:right; color:'+(m.sB>=m.sA?"var(--texte)":"var(--sourd)")+'">'+esc(data.teams[m.b])+'</span></div>'+
+      '<div class="scores"><span class="ppm" style="color:'+cA+'">'+m.ppmA.toFixed(2)+'</span>'+chip+
+      '<span class="ppm" style="color:'+cB+'">'+m.ppmB.toFixed(2)+'</span></div>'+
+      '<div class="detail"><span>'+m.dA.pts.toFixed(1)+' pts / '+m.dA.games+' m.</span>'+
+      '<span>pts par match</span>'+
+      '<span>'+m.dB.pts.toFixed(1)+' pts / '+m.dB.games+' m.</span></div></div>';
+  }).join("");
+}
+
+function rendreCalendrier(app){
+  app.innerHTML=data.schedule.map((paires,i)=>{
+    const fait=paires.every(([a,b])=>data.weeks[i+1]&&data.weeks[i+1][a]&&data.weeks[i+1][b]);
+    return '<div class="carte pad" style="border-color:'+(fait?"var(--ligne)":"var(--bleu)")+'">'+
+      '<div class="cal-entete"><span style="font-weight:800; font-size:14px;">Semaine '+(i+1)+'</span>'+
+      '<span class="chip'+(fait?"":" egal")+'">'+(fait?"complétée":"à venir")+'</span></div>'+
+      '<div class="cal-paires">'+paires.map(([a,b])=>esc(data.teams[a])+' <span style="color:var(--ligne)">vs</span> '+esc(data.teams[b])).join("<br>")+'</div>'+
+    '</div>';
+  }).join("")+
+  (admin?'<p class="centre" style="margin-top:14px;"><button class="btn danger" onclick="reinitialiser()">Réinitialiser le tableau (efface tout)</button></p>':'');
+}
+
+function rendreSaisie(app){
+  app.innerHTML=barreSemaine()+
+    '<div class="carte pad">'+
+    '<p class="sourd" style="font-size:13px;">Entre les totaux <strong style="color:var(--texte)">cumulatifs de saison</strong> tels qu\'affichés sur ESPN (points totaux et matchs utilisés). L\'app calcule la semaine en soustrayant le relevé précédent.</p>'+
+    '<label>Collage rapide — colle les rangées du classement ESPN (Season Points), ou : nom, points, matchs</label>'+
+    '<textarea id="zone-collage" rows="4" class="mono" placeholder="Colle ici les rangées du tableau « Standings » d\'ESPN"></textarea>'+
+    '<button class="btn secondaire" onclick="appliquerCollage()">Remplir à partir du collage</button>'+
+    '<p class="msg" id="msg-collage"></p>'+
+    '<div id="champs-saisie"></div>'+
+    '<button class="btn" onclick="enregistrerSemaine()">Enregistrer la semaine '+semaine+'</button>'+
+    '</div>';
+  rendreSaisieChamps();
+}
+
+function rendreSaisieChamps(){
+  const zone=document.getElementById("champs-saisie");
+  if(!zone) return;
+  zone.innerHTML='<div class="grille-saisie">'+
+    '<span class="entete">Équipe</span><span class="entete num">Pts totaux</span><span class="entete num">Matchs</span>'+
+    data.teams.map((nom,t)=>{
+      const b=brouillon[t]||{pts:"",games:""};
+      return '<span style="font-size:14px; font-weight:600;">'+esc(nom)+'</span>'+
+        '<input value="'+esc(b.pts)+'" inputmode="decimal" style="text-align:right; padding:6px 8px;" oninput="majBrouillon('+t+',\'pts\',this.value)">'+
+        '<input value="'+esc(b.games)+'" inputmode="numeric" style="text-align:right; padding:6px 8px;" oninput="majBrouillon('+t+',\'games\',this.value)">';
+    }).join("")+
+    '</div>';
+}
+</script>
+</body>
+</html>
