@@ -216,7 +216,9 @@ auth.onAuthStateChanged(u=>{ admin=!!u; rendre(); });
 
 async function sauvegarder(nouveau){
   try{
-    await DOC.set(nouveau);
+    /* Firestore refuse les tableaux imbriqués : le calendrier voyage en JSON */
+    const {schedule, ...reste}=nouveau;
+    await DOC.set({...reste, scheduleJson: JSON.stringify(schedule||[])});
     message("Enregistré — visible par toute la ligue.", false);
   }catch(e){
     message("La sauvegarde a échoué. Es-tu connecté en admin? (règles Firestore : écriture réservée aux comptes connectés)", true);
@@ -339,7 +341,7 @@ function rendre(){
 
   const app=document.getElementById("app");
 
-  if(data===null && !chargeInitiale){ return; } /* en attente du premier snapshot */
+  if(!premierChargement){ return; } /* en attente du premier snapshot */
 
   if(!data){
     app.innerHTML = admin ? `
