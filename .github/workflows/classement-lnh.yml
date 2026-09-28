@@ -1,0 +1,42 @@
+# Met à jour standings.json chaque jour avec le classement de la LNH.
+# À placer dans le repo à : .github/workflows/classement-lnh.yml
+name: Classement LNH
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # tous les jours à 10 h UTC (6 h, heure de l'Est)
+  workflow_dispatch:        # permet aussi de le lancer à la main
+
+permissions:
+  contents: write
+
+jobs:
+  classement:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Télécharger le classement de la LNH
+        run: |
+          curl -sfL https://api-web.nhle.com/v1/standings/now -o brut.json
+          jq '{
+                majLe: (now | todate),
+                equipes: [ .standings[] | {
+                  abrev: .teamAbbrev.default,
+                  nom:   .teamName.default,
+                  nomFr: (.teamName.fr // .teamName.default),
+                  ville: .placeName.default,
+                  pts:   .points,
+                  pj:    .gamesPlayed
+                } ]
+              }' brut.json > standings.json
+          rm brut.json
+          echo "Équipes trouvées : $(jq '.equipes | length' standings.json)"
+
+      - name: Enregistrer dans le repo
+        run: |
+          git config user.name  "classement-lnh"
+          git config user.email "actions@users.noreply.github.com"
+          git add standings.json
+          git diff --cached --quiet || git commit -m "Classement LNH du $(date -u +%F)"
+          git push
