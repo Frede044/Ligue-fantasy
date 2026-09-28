@@ -1,0 +1,261 @@
+{
+  "majLe": "2026-09-28T17:12:39Z",
+  "equipes": [
+    {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "BOS",
+      "nom": "Boston Bruins",
+      "nomFr": "Bruins de Boston",
+      "ville": "Boston",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "BUF",
+      "nom": "Buffalo Sabres",
+      "nomFr": "Sabres de Buffalo",
+      "ville": "Buffalo",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "CGY",
+      "nom": "Calgary Flames",
+      "nomFr": "Flames de Calgary",
+      "ville": "Calgary",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "CAR",
+      "nom": "Carolina Hurricanes",
+      "nomFr": "Hurricanes de la Caroline",
+      "ville": "Carolina",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "CHI",
+      "nom": "Chicago Blackhawks",
+      "nomFr": "Blackhawks de Chicago",
+      "ville": "Chicago",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "COL",
+      "nom": "Colorado Avalanche",
+      "nomFr": "Avalanche du Colorado",
+      "ville": "Colorado",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "CBJ",
+      "nom": "Columbus Blue Jackets",
+      "nomFr": "Blue Jackets de Columbus",
+      "ville": "Columbus",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "DAL",
+      "nom": "Dallas Stars",
+      "nomFr": "Stars de Dallas",
+      "ville": "Dallas",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "DET",
+      "nom": "Detroit Red Wings",
+      "nomFr": "Red Wings de Detroit",
+      "ville": "Detroit",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "EDM",
+      "nom": "Edmonton Oilers",
+      "nomFr": "Oilers d'Edmonton",
+      "ville": "Edmonton",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "FLA",
+      "nom": "Florida Panthers",
+      "nomFr": "Panthers de la Floride",
+      "ville": "Florida",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "LAK",
+      "nom": "Los Angeles Kings",
+      "nomFr": "Kings de Los Angeles",
+      "ville": "Los Angeles",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "MIN",
+      "nom": "Minnesota Wild",
+      "nomFr": "Wild du Minnesota",
+      "ville": "Minnesota",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "NSH",
+      "nom": "Nashville Predators",
+      "nomFr": "Predators de Nashville",
+      "ville": "Nashville",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "NJD",
+      "nom": "New Jersey Devils",
+      "nomFr": "Devils du New Jersey",
+      "ville": "New Jersey",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "NYI",
+      "nom": "New York Islanders",
+      "nomFr": "Islanders de New York",
+      "ville": "NY Islanders",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "OTT",
+      "nom": "Ottawa Senators",
+      "nomFr": "Sénateurs d'Ottawa",
+      "ville": "Ottawa",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "PHI",
+      "nom": "Philadelphia Flyers",
+      "nomFr": "Flyers de Philadelphie",
+      "ville": "Philadelphia",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "PIT",
+      "nom": "Pittsburgh Penguins",
+      "nomFr": "Penguins de Pittsburgh",
+      "ville": "Pittsburgh",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "SJS",
+      "nom": "San Jose Sharks",
+      "nomFr": "Sharks de San Jose",
+      "ville": "San Jose",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "SEA",
+      "nom": "Seattle Kraken",
+      "nomFr": "Kraken de Seattle",
+      "ville": "Seattle",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "STL",
+      "nom": "St. Louis Blues",
+      "nomFr": "Blues de St. Louis",
+      "ville": "St. Louis",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "TBL",
+      "nom": "Tampa Bay Lightning",
+      "nomFr": "Lightning de Tampa Bay",
+      "ville": "Tampa Bay",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "TOR",
+      "nom": "Toronto Maple Leafs",
+      "nomFr": "Maple Leafs de Toronto",
+      "ville": "Toronto",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "VAN",
+      "nom": "Vancouver Canucks",
+      "nomFr": "Canucks de Vancouver",
+      "ville": "Vancouver",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "VGK",
+      "nom": "Vegas Golden Knights",
+      "nomFr": "Golden Knights de Vegas",
+      "ville": "Vegas",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
+      "pts": 0,
+      "pj": 0
+    },
+    {
+      "abrev": "WPG",
+      "nom": "Winnipeg Jets",
+      "nomFr": "Jets de Winnipeg",
+      "ville": "Winnipeg",
+      "pts": 0,
+      "pj": 0
+    }
+  ]
+}
