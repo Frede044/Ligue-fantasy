@@ -138,6 +138,25 @@ let premierChargement = false;
 let semaineInitialisee = false;
 
 const r2 = x => Math.round(x*100)/100;
+
+/* ---------------- dates des semaines ---------------- */
+/* Semaine 1 = lundi 28 septembre au dimanche 4 octobre 2026, puis 7 jours par semaine */
+const DEBUT_SAISON = new Date(2026, 8, 28);
+function bornesSemaine(w){
+  const debut = new Date(DEBUT_SAISON); debut.setDate(debut.getDate() + 7*(w-1));
+  const fin = new Date(debut); fin.setDate(fin.getDate() + 6);
+  return {debut, fin};
+}
+function datesSemaine(w){
+  const {debut, fin} = bornesSemaine(w);
+  const f = d => d.toLocaleDateString("fr-CA", {day:"numeric", month:"short"});
+  return f(debut) + " au " + f(fin);
+}
+function semaineDuJour(){
+  const auj = new Date(); auj.setHours(0,0,0,0);
+  const w = Math.floor((auj - DEBUT_SAISON) / (7*24*3600*1000)) + 1;
+  return w;
+}
 const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"");
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 
@@ -188,8 +207,9 @@ function classement(){
     for(let w=data.weeksCount;w>=1;w--){ const e=data.weeks[w]&&data.weeks[w][l.t]; if(e){dernier=e;break;} }
     if(!dernier) dernier=(data.baseline&&data.baseline[l.t])||null;
     l.saison=dernier?dernier.pts:0;
+    l.total=Math.round((l.saison+l.duel)*10)/10;
   }
-  return lignes.sort((x,y)=>y.duel-x.duel||y.saison-x.saison);
+  return lignes.sort((x,y)=>y.total-x.total||y.duel-x.duel);
 }
 
 /* ---------------- Firestore ---------------- */
@@ -300,7 +320,19 @@ function enregistrerSemaine(){
     }
   });
   if(remplies===0){ message("Aucune donnée à enregistrer pour cette semaine.", true); return; }
-  const nouveau={...data, weeks:{...data.weeks, [semaine]:entree}};
+  /* vérification : un total cumulatif ne peut pas baisser, et une semaine ne dépasse pas ~60 matchs */
+  const erreurs=[];
+  Object.keys(entree).forEach(t=>{
+    const prec=releveAvant(semaine,t), e=entree[t];
+    const nom=data.teams[t];
+    if(e.pts<prec.pts) erreurs.push(nom+" : points plus bas que la semaine précédente ("+prec.pts+")");
+    if(e.games<prec.games) erreurs.push(nom+" : matchs plus bas que la semaine précédente ("+prec.games+")");
+    if(e.games-prec.games>60) erreurs.push(nom+" : plus de 60 matchs cette semaine, vérifie le chiffre");
+  });
+  if(erreurs.length){
+    if(!confirm("Vérifie ces relevés :\n\n"+erreurs.join("\n")+"\n\nEnregistrer quand même ?")) return;
+  }
+  const nouveau={...data, weeks:{...data.weeks, [semaine]:entree}, majLe:new Date().toISOString()};
   sauvegarder(nouveau);
   ongletActif="semaine";
 }
@@ -378,23 +410,25 @@ function changerSemaine(delta){
 function barreSemaine(){
   return '<div class="semaine-nav">'+
     '<button onclick="changerSemaine(-1)" aria-label="Semaine précédente">‹</button>'+
-    '<span class="titre">Semaine <b>'+semaine+'</b><span class="sourd" style="font-weight:600"> / '+data.weeksCount+'</span></span>'+
+    '<span class="titre">Semaine <b>'+semaine+'</b><span class="sourd" style="font-weight:600"> / '+data.weeksCount+'</span>'+
+    '<span class="sourd" style="display:block; font-size:12px; font-weight:600; text-align:center;">'+datesSemaine(semaine)+(semaine===semaineDuJour()?' · en cours':'')+'</span></span>'+
     '<button onclick="changerSemaine(1)" aria-label="Semaine suivante">›</button></div>';
 }
 
 function rendreClassement(app){
   const lignes=classement();
   app.innerHTML='<div class="carte"><table><thead><tr>'+
-    '<th style="text-align:left">Équipe</th><th class="num">Duels</th><th class="num">V-É-D</th><th class="num">Pts saison</th>'+
+    '<th style="text-align:left">Équipe</th><th class="num">Total</th><th class="num">Saison</th><th class="num">Duels</th><th class="num">V-É-D</th>'+
     '</tr></thead><tbody>'+
     lignes.map((l,i)=>'<tr>'+
       '<td style="font-weight:'+(i===0?800:600)+'"><span class="sourd num" style="margin-right:10px">'+(i+1)+'</span>'+esc(data.teams[l.t])+
       (i===0&&l.duel>0?' <span style="color:var(--lumiere)">●</span>':'')+'</td>'+
-      '<td class="num duelpts">'+l.duel+'</td>'+
-      '<td class="num sourd">'+l.v+'-'+l.e+'-'+l.d+'</td>'+
+      '<td class="num" style="font-weight:800">'+(l.total?l.total.toLocaleString("fr-CA"):"—")+'</td>'+
       '<td class="num sourd">'+(l.saison?l.saison.toLocaleString("fr-CA"):"—")+'</td>'+
+      '<td class="num duelpts">+'+l.duel+'</td>'+
+      '<td class="num sourd">'+l.v+'-'+l.e+'-'+l.d+'</td>'+
     '</tr>').join("")+
-    '</tbody></table><p class="note">« Duels » s\'ajoute au total de saison à la fin de l\'année. Départage : points de saison.</p></div>';
+    '</tbody></table><p class="note">Total = points de saison ESPN + points de duels. '+(data.majLe?'Dernière mise à jour : '+new Date(data.majLe).toLocaleString("fr-CA",{dateStyle:"medium",timeStyle:"short"})+'.':'')+'</p></div>';
 }
 
 function rendreSemaine(app){
@@ -423,7 +457,7 @@ function rendreCalendrier(app){
   app.innerHTML=data.schedule.map((paires,i)=>{
     const fait=paires.every(([a,b])=>data.weeks[i+1]&&data.weeks[i+1][a]&&data.weeks[i+1][b]);
     return '<div class="carte pad" style="border-color:'+(fait?"var(--ligne)":"var(--bleu)")+'">'+
-      '<div class="cal-entete"><span style="font-weight:800; font-size:14px;">Semaine '+(i+1)+'</span>'+
+      '<div class="cal-entete"><span style="font-weight:800; font-size:14px;">Semaine '+(i+1)+' <span class="sourd" style="font-weight:600; font-size:12px;">· '+datesSemaine(i+1)+'</span></span>'+
       '<span class="chip'+(fait?"":" egal")+'">'+(fait?"complétée":"à venir")+'</span></div>'+
       '<div class="cal-paires">'+paires.map(([a,b])=>esc(data.teams[a])+' <span style="color:var(--ligne)">vs</span> '+esc(data.teams[b])).join("<br>")+'</div>'+
     '</div>';
