@@ -207,7 +207,10 @@ function classement(){
     for(let w=data.weeksCount;w>=1;w--){ const e=data.weeks[w]&&data.weeks[w][l.t]; if(e){dernier=e;break;} }
     if(!dernier) dernier=(data.baseline&&data.baseline[l.t])||null;
     l.saison=dernier?dernier.pts:0;
-    l.total=Math.round((l.saison+l.duel)*10)/10;
+    const lnh=(data.lnh&&data.lnh[l.t])||{};
+    l.equipeLnh=lnh.equipe||"";
+    l.ptsLnh=Number(lnh.pts)||0;
+    l.total=Math.round((l.saison+l.duel+l.ptsLnh)*10)/10;
   }
   return lignes.sort((x,y)=>y.total-x.total||y.duel-x.duel);
 }
@@ -366,8 +369,8 @@ function rendre(){
 
   /* onglets */
   const onglets=[["classement","Classement"],["semaine","Duels"],["calendrier","Calendrier"]];
-  if(admin) onglets.push(["saisie","Saisie"]);
-  if(ongletActif==="saisie"&&!admin) ongletActif="classement";
+  if(admin){ onglets.push(["saisie","Saisie"]); onglets.push(["lnh","Équipes LNH"]); }
+  if((ongletActif==="saisie"||ongletActif==="lnh")&&!admin) ongletActif="classement";
   document.getElementById("nav").innerHTML=onglets.map(([id,lbl])=>
     '<button class="'+(ongletActif===id?"actif":"")+'" onclick="allerA(\''+id+'\')">'+lbl+'</button>').join("");
 
@@ -394,6 +397,7 @@ function rendre(){
   else if(ongletActif==="semaine") rendreSemaine(app);
   else if(ongletActif==="calendrier") rendreCalendrier(app);
   else if(ongletActif==="saisie") rendreSaisie(app);
+  else if(ongletActif==="lnh") rendreLnh(app);
 }
 
 function allerA(id){
@@ -415,20 +419,49 @@ function barreSemaine(){
     '<button onclick="changerSemaine(1)" aria-label="Semaine suivante">›</button></div>';
 }
 
+function rendreLnh(app){
+  const lnh=data.lnh||{};
+  app.innerHTML='<div class="carte pad">'+
+    '<p class="sourd" style="font-size:13px;">Entre l\'équipe LNH choisie par chaque équipe et ses <strong style="color:var(--texte)">points au classement de la LNH</strong>. Mets les points à jour chaque semaine, en même temps que la saisie des duels.</p>'+
+    '<div class="grille-saisie" style="grid-template-columns:1fr 1fr 80px">'+
+    '<span class="entete">Équipe</span><span class="entete">Équipe LNH</span><span class="entete num">Pts LNH</span>'+
+    data.teams.map((nom,t)=>{
+      const e=lnh[t]||{};
+      return '<span style="font-size:14px; font-weight:600;">'+esc(nom)+'</span>'+
+        '<input id="lnh-eq-'+t+'" value="'+esc(e.equipe||"")+'" placeholder="ex. Colorado" style="padding:6px 8px;">'+
+        '<input id="lnh-pts-'+t+'" value="'+esc(e.pts!=null?e.pts:"")+'" inputmode="numeric" style="text-align:right; padding:6px 8px;">';
+    }).join("")+
+    '</div>'+
+    '<button class="btn" onclick="enregistrerLnh()">Enregistrer les équipes LNH</button>'+
+    '</div>';
+}
+function enregistrerLnh(){
+  const lnh={};
+  data.teams.forEach((_,t)=>{
+    const eq=document.getElementById("lnh-eq-"+t).value.trim();
+    const pts=parseInt(document.getElementById("lnh-pts-"+t).value)||0;
+    if(eq||pts) lnh[t]={equipe:eq, pts:pts};
+  });
+  sauvegarder({...data, lnh:lnh, majLe:new Date().toISOString()});
+  ongletActif="classement";
+}
+
 function rendreClassement(app){
   const lignes=classement();
   app.innerHTML='<div class="carte"><table><thead><tr>'+
-    '<th style="text-align:left">Équipe</th><th class="num">Total</th><th class="num">Saison</th><th class="num">Duels</th><th class="num">V-É-D</th>'+
+    '<th style="text-align:left">Équipe</th><th class="num">Total</th><th class="num">Saison</th><th class="num">LNH</th><th class="num">Duels</th><th class="num">V-É-D</th>'+
     '</tr></thead><tbody>'+
     lignes.map((l,i)=>'<tr>'+
       '<td style="font-weight:'+(i===0?800:600)+'"><span class="sourd num" style="margin-right:10px">'+(i+1)+'</span>'+esc(data.teams[l.t])+
-      (i===0&&l.duel>0?' <span style="color:var(--lumiere)">●</span>':'')+'</td>'+
+      (i===0&&l.total>0?' <span style="color:var(--lumiere)">●</span>':'')+
+      (l.equipeLnh?'<div class="sourd" style="font-size:12px; font-weight:600; margin-left:22px;">🏒 '+esc(l.equipeLnh)+'</div>':'')+'</td>'+
       '<td class="num" style="font-weight:800">'+(l.total?l.total.toLocaleString("fr-CA"):"—")+'</td>'+
       '<td class="num sourd">'+(l.saison?l.saison.toLocaleString("fr-CA"):"—")+'</td>'+
+      '<td class="num sourd">'+(l.equipeLnh?'+'+l.ptsLnh:'—')+'</td>'+
       '<td class="num duelpts">+'+l.duel+'</td>'+
       '<td class="num sourd">'+l.v+'-'+l.e+'-'+l.d+'</td>'+
     '</tr>').join("")+
-    '</tbody></table><p class="note">Total = points de saison ESPN + points de duels. '+(data.majLe?'Dernière mise à jour : '+new Date(data.majLe).toLocaleString("fr-CA",{dateStyle:"medium",timeStyle:"short"})+'.':'')+'</p></div>';
+    '</tbody></table><p class="note">Total = points de saison ESPN + points au classement de l\'équipe LNH choisie + points de duels. '+(data.majLe?'Dernière mise à jour : '+new Date(data.majLe).toLocaleString("fr-CA",{dateStyle:"medium",timeStyle:"short"})+'.':'')+'</p></div>';
 }
 
 function rendreSemaine(app){
