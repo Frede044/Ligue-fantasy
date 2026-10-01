@@ -179,24 +179,30 @@ function releveAvant(w,t){
   return (data.baseline&&data.baseline[t])||{pts:0,games:0};
 }
 function resultatsSemaine(w){
+  const auto = semaineAuto(w);
   return (data.schedule[w-1]||[]).map(([a,b])=>{
-    const ea=data.weeks[w]&&data.weeks[w][a], eb=data.weeks[w]&&data.weeks[w][b];
-    if(!ea||!eb) return {a,b,attente:true};
-    const pa=releveAvant(w,a), pb=releveAvant(w,b);
-    const dA={pts:ea.pts-pa.pts, games:ea.games-pa.games};
-    const dB={pts:eb.pts-pb.pts, games:eb.games-pb.games};
+    let dA, dB, enCours = false;
+    if(auto){
+      dA = auto.res[a]; dB = auto.res[b]; enCours = auto.enCours;
+    } else {
+      const ea=data.weeks[w]&&data.weeks[w][a], eb=data.weeks[w]&&data.weeks[w][b];
+      if(!ea||!eb) return {a,b,attente:true};
+      const pa=releveAvant(w,a), pb=releveAvant(w,b);
+      dA={pts:ea.pts-pa.pts, games:ea.games-pa.games};
+      dB={pts:eb.pts-pb.pts, games:eb.games-pb.games};
+    }
     const ppmA=dA.games>0?r2(dA.pts/dA.games):0;
     const ppmB=dB.games>0?r2(dB.pts/dB.games):0;
     let sA=0,sB=0;
     if(ppmA>ppmB) sA=10; else if(ppmB>ppmA) sB=10; else {sA=5;sB=5;}
-    return {a,b,attente:false,dA,dB,ppmA,ppmB,sA,sB};
+    return {a,b,attente:false,enCours,dA,dB,ppmA,ppmB,sA,sB};
   });
 }
 function classement(){
   const lignes=data.teams.map((_,t)=>({t,duel:0,v:0,e:0,d:0}));
   for(let w=1;w<=data.weeksCount;w++){
     for(const m of resultatsSemaine(w)){
-      if(m.attente) continue;
+      if(m.attente || m.enCours) continue;
       const A=lignes[m.a],B=lignes[m.b];
       A.duel+=m.sA; B.duel+=m.sB;
       if(m.sA===10){A.v++;B.d++;} else if(m.sB===10){B.v++;A.d++;} else {A.e++;B.e++;}
@@ -207,6 +213,7 @@ function classement(){
     for(let w=data.weeksCount;w>=1;w--){ const e=data.weeks[w]&&data.weeks[w][l.t]; if(e){dernier=e;break;} }
     if(!dernier) dernier=(data.baseline&&data.baseline[l.t])||null;
     l.saison=dernier?dernier.pts:0;
+    if(espn){ const e = espn.equipes.find(x => String(x.id) === idEspn(l.t)); if(e) l.saison = e.pts; }
     const lnh=(data.lnh&&data.lnh[l.t])||{};
     const auto=trouverEquipeLnh(lnh.equipe);
     l.equipeLnh=auto?(auto.nomFr||auto.nom):(lnh.equipe||"");
@@ -252,6 +259,42 @@ function trouverEquipeLnh(txt){
       || null;
 }
 chargerClassementLnh();
+
+/* ---------------- données ESPN automatiques ---------------- */
+/* espn.json est produit chaque matin par la tâche GitHub « Ligue ESPN » */
+let espn = null;
+async function chargerEspn(){
+  try{
+    const r = await fetch("espn.json?v="+Date.now(), {cache:"no-store"});
+    if(r.ok){ const d = await r.json(); if(d && d.jours && d.equipes){ espn = d; rendre(); } }
+  }catch(e){ /* pas encore de données ESPN : saisie manuelle */ }
+}
+/* associe chaque équipe du tableau à son équipe ESPN (par nom, sinon par ordre) */
+function idEspn(t){
+  if(!espn) return null;
+  const n = norm(data.teams[t]||"");
+  const e = espn.equipes.find(x => norm(x.nom) === n) ||
+            espn.equipes.find(x => n && (norm(x.nom).includes(n) || n.includes(norm(x.nom))));
+  return e ? String(e.id) : String(espn.equipes[t] ? espn.equipes[t].id : t+1);
+}
+const jourIso = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+function semaineAuto(w){
+  if(!espn) return null;
+  const {debut, fin} = bornesSemaine(w);
+  const auj = new Date(); auj.setHours(0,0,0,0);
+  if(debut > auj) return null;
+  const res = {};
+  data.teams.forEach((_,t) => {
+    const id = idEspn(t); let pts = 0, games = 0;
+    for(let d = new Date(debut); d <= fin; d.setDate(d.getDate()+1)){
+      const j = espn.jours[jourIso(d)]; const e = j && j[id];
+      if(e){ pts += e.pts; games += (e.m.F||0)+(e.m.D||0)+(e.m.U||0)+(e.m.G||0); }
+    }
+    res[t] = {pts: Math.round(pts*100)/100, games};
+  });
+  return {res, enCours: fin >= auj};
+}
+chargerEspn();
 
 DOC.onSnapshot(snap=>{
   const brut = snap.exists ? snap.data() : null;
@@ -521,7 +564,8 @@ function rendreSemaine(app){
       return '<div class="carte duel"><div class="noms"><span>'+esc(data.teams[m.a])+'</span>'+
         '<span class="chip">à venir</span><span style="text-align:right">'+esc(data.teams[m.b])+'</span></div></div>';
     }
-    const chip=m.sA===m.sB?'<span class="chip egal">5 – 5</span>':
+    const chip=m.enCours?'<span class="chip egal">en cours</span>':
+      m.sA===m.sB?'<span class="chip egal">5 – 5</span>':
       '<span class="chip gagne">'+(m.sA===10?"10 – 0":"0 – 10")+'</span>';
     const cA=m.sA===10?"var(--lumiere)":m.sA===5?"var(--bleu)":"var(--sourd)";
     const cB=m.sB===10?"var(--lumiere)":m.sB===5?"var(--bleu)":"var(--sourd)";
