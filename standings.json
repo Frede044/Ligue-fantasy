@@ -1,6 +1,22 @@
 {
-  "majLe": "2026-09-30T16:11:21Z",
+  "majLe": "2026-10-01T16:48:31Z",
   "equipes": [
+    {
+      "abrev": "PIT",
+      "nom": "Pittsburgh Penguins",
+      "nomFr": "Penguins de Pittsburgh",
+      "ville": "Pittsburgh",
+      "pts": 2,
+      "pj": 1
+    },
+    {
+      "abrev": "COL",
+      "nom": "Colorado Avalanche",
+      "nomFr": "Avalanche du Colorado",
+      "ville": "Colorado",
+      "pts": 2,
+      "pj": 1
+    },
     {
       "abrev": "VGK",
       "nom": "Vegas Golden Knights",
@@ -40,6 +56,14 @@
       "ville": "Florida",
       "pts": 2,
       "pj": 1
+    },
+    {
+      "abrev": "TOR",
+      "nom": "Toronto Maple Leafs",
+      "nomFr": "Maple Leafs de Toronto",
+      "ville": "Toronto",
+      "pts": 2,
+      "pj": 2
     },
     {
       "abrev": "EDM",
@@ -82,14 +106,6 @@
       "pj": 0
     },
     {
-      "abrev": "COL",
-      "nom": "Colorado Avalanche",
-      "nomFr": "Avalanche du Colorado",
-      "ville": "Colorado",
-      "pts": 0,
-      "pj": 0
-    },
-    {
       "abrev": "CBJ",
       "nom": "Columbus Blue Jackets",
       "nomFr": "Blue Jackets de Columbus",
@@ -110,14 +126,6 @@
       "nom": "Detroit Red Wings",
       "nomFr": "Red Wings de Detroit",
       "ville": "Detroit",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "LAK",
-      "nom": "Los Angeles Kings",
-      "nomFr": "Kings de Los Angeles",
-      "ville": "Los Angeles",
       "pts": 0,
       "pj": 0
     },
@@ -146,34 +154,10 @@
       "pj": 0
     },
     {
-      "abrev": "NYI",
-      "nom": "New York Islanders",
-      "nomFr": "Islanders de New York",
-      "ville": "NY Islanders",
-      "pts": 0,
-      "pj": 0
-    },
-    {
       "abrev": "OTT",
       "nom": "Ottawa Senators",
       "nomFr": "Sénateurs d'Ottawa",
       "ville": "Ottawa",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "PHI",
-      "nom": "Philadelphia Flyers",
-      "nomFr": "Flyers de Philadelphie",
-      "ville": "Philadelphia",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "PIT",
-      "nom": "Pittsburgh Penguins",
-      "nomFr": "Penguins de Pittsburgh",
-      "ville": "Pittsburgh",
       "pts": 0,
       "pj": 0
     },
@@ -234,10 +218,10 @@
       "pj": 0
     },
     {
-      "abrev": "TOR",
-      "nom": "Toronto Maple Leafs",
-      "nomFr": "Maple Leafs de Toronto",
-      "ville": "Toronto",
+      "abrev": "NYI",
+      "nom": "New York Islanders",
+      "nomFr": "Islanders de New York",
+      "ville": "NY Islanders",
       "pts": 0,
       "pj": 1
     },
@@ -254,6 +238,22 @@
       "nom": "New York Rangers",
       "nomFr": "Rangers de New York",
       "ville": "NY Rangers",
+      "pts": 0,
+      "pj": 1
+    },
+    {
+      "abrev": "LAK",
+      "nom": "Los Angeles Kings",
+      "nomFr": "Kings de Los Angeles",
+      "ville": "Los Angeles",
+      "pts": 0,
+      "pj": 1
+    },
+    {
+      "abrev": "PHI",
+      "nom": "Philadelphia Flyers",
+      "nomFr": "Flyers de Philadelphie",
+      "ville": "Philadelphia",
       "pts": 0,
       "pj": 1
     }
