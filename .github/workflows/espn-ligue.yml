@@ -1,0 +1,102 @@
+# Va chercher les points et les matchs utilisés de chaque équipe de la ligue ESPN, jour par jour.
+# À placer dans le repo Ligue-fantasy à : .github/workflows/espn-ligue.yml
+# Si la ligue est privée : ajoute les secrets ESPN_S2 et SWID (Settings -> Secrets and variables -> Actions).
+name: Ligue ESPN
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # tous les jours à 11 h UTC (7 h, heure de l'Est)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  espn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Télécharger les données de la ligue
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: |
+          cat > espn.py << 'PYEOF'
+          import json, os, time, urllib.request, urllib.error, datetime
+
+          LIGUE = "1116118861"
+          SAISON = 2027
+          BASE = f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/fhl/seasons/{SAISON}/segments/0/leagues/{LIGUE}"
+          DEBUT = datetime.date(2026, 9, 29)   # période de pointage 1 = premier jour de la saison
+          # cases d'alignement ESPN (hockey) : 0-3 attaquants, 4 défenseur, 5 gardien, 6 UTIL ; 7 banc, 8 IR
+          CASES = {0: "F", 1: "F", 2: "F", 3: "F", 4: "D", 5: "G", 6: "U"}
+
+          biscuits = []
+          if os.environ.get("ESPN_S2"): biscuits.append("espn_s2=" + os.environ["ESPN_S2"])
+          if os.environ.get("SWID"): biscuits.append("SWID=" + os.environ["SWID"])
+
+          def lire(params):
+              entetes = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
+              if biscuits: entetes["Cookie"] = "; ".join(biscuits)
+              req = urllib.request.Request(BASE + "?" + params, headers=entetes)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return json.loads(r.read())
+
+          try:
+              ligue = lire("view=mTeam&view=mSettings&view=mStatus")
+          except urllib.error.HTTPError as e:
+              print(f"ERREUR {e.code} : la ligue est probablement privée. Ajoute les secrets ESPN_S2 et SWID.")
+              raise SystemExit(1)
+
+          equipes = []
+          for t in ligue.get("teams", []):
+              nom = t.get("name") or (t.get("location", "") + " " + t.get("nickname", "")).strip()
+              pts = t.get("points")
+              if pts is None:
+                  pts = t.get("record", {}).get("overall", {}).get("pointsFor", 0)
+              equipes.append({"id": t["id"], "nom": nom, "abrev": t.get("abbrev", ""), "pts": round(pts or 0, 1)})
+
+          statut = ligue.get("status", {})
+          derniere = statut.get("latestScoringPeriod") or ligue.get("scoringPeriodId") or 1
+          premiere = statut.get("firstScoringPeriod") or 1
+          print("Équipes :", ", ".join(f'{e["id"]}={e["nom"]}' for e in equipes))
+          print("Périodes de pointage :", premiere, "à", derniere)
+
+          jours = {}
+          for p in range(premiere, derniere + 1):
+              date = (DEBUT + datetime.timedelta(days=p - 1)).isoformat()
+              d = lire(f"view=mRoster&scoringPeriodId={p}")
+              for t in d.get("teams", []):
+                  total = 0.0
+                  matchs = {"F": 0, "D": 0, "U": 0, "G": 0}
+                  for e in t.get("roster", {}).get("entries", []):
+                      pos = CASES.get(e.get("lineupSlotId"))
+                      if not pos: continue
+                      stats = [s for s in e.get("playerPoolEntry", {}).get("player", {}).get("stats", [])
+                               if s.get("scoringPeriodId") == p and s.get("statSourceId") == 0 and s.get("statSplitTypeId") == 5]
+                      if not stats: continue
+                      s = stats[0]
+                      # un joueur compte s'il a au moins une statistique (un gardien qui n'a pas joué n'en a pas)
+                      if not any(v for v in (s.get("stats") or {}).values()) and not s.get("appliedTotal"): continue
+                      total += s.get("appliedTotal", 0) or 0
+                      matchs[pos] += 1
+                  jours.setdefault(date, {})[str(t["id"])] = {"pts": round(total, 2), "m": matchs}
+              time.sleep(0.4)
+
+          json.dump({"majLe": datetime.datetime.utcnow().isoformat() + "Z", "equipes": equipes, "jours": jours},
+                    open("espn.json", "w"), ensure_ascii=False)
+          dernier = sorted(jours)[-1] if jours else None
+          if dernier:
+              print("Exemple, le", dernier, ":", json.dumps(jours[dernier], ensure_ascii=False)[:600])
+          PYEOF
+          python3 espn.py
+
+      - name: Enregistrer dans le repo
+        run: |
+          git config user.name  "espn-ligue"
+          git config user.email "actions@users.noreply.github.com"
+          git add espn.json
+          git diff --cached --quiet || git commit -m "Données ESPN du $(date -u +%F)"
+          git pull --rebase
+          git push
