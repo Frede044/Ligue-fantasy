@@ -5,7 +5,10 @@ name: Ligue ESPN
 
 on:
   schedule:
-    - cron: "0 11 * * *"   # tous les jours à 11 h UTC (7 h, heure de l'Est)
+    # 3 essais par jour, à des minutes peu achalandées (GitHub retarde souvent les tâches prévues à l'heure pile)
+    - cron: "17 9 * * *"    # 5 h 17, heure de l'Est
+    - cron: "17 12 * * *"   # 8 h 17
+    - cron: "17 16 * * *"   # 12 h 17
   workflow_dispatch:
 
 permissions:
