@@ -1,6 +1,22 @@
 {
-  "majLe": "2026-10-02T16:02:19Z",
+  "majLe": "2026-10-03T04:54:12Z",
   "equipes": [
+    {
+      "abrev": "BOS",
+      "nom": "Boston Bruins",
+      "nomFr": "Bruins de Boston",
+      "ville": "Boston",
+      "pts": 4,
+      "pj": 2
+    },
+    {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 4,
+      "pj": 3
+    },
     {
       "abrev": "EDM",
       "nom": "Edmonton Oilers",
@@ -50,6 +66,14 @@
       "pj": 1
     },
     {
+      "abrev": "STL",
+      "nom": "St. Louis Blues",
+      "nomFr": "Blues de St. Louis",
+      "ville": "St. Louis",
+      "pts": 2,
+      "pj": 1
+    },
+    {
       "abrev": "CBJ",
       "nom": "Columbus Blue Jackets",
       "nomFr": "Blue Jackets de Columbus",
@@ -58,18 +82,10 @@
       "pj": 1
     },
     {
-      "abrev": "VGK",
-      "nom": "Vegas Golden Knights",
-      "nomFr": "Golden Knights de Vegas",
-      "ville": "Vegas",
-      "pts": 2,
-      "pj": 1
-    },
-    {
-      "abrev": "BOS",
-      "nom": "Boston Bruins",
-      "nomFr": "Bruins de Boston",
-      "ville": "Boston",
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
       "pts": 2,
       "pj": 1
     },
@@ -78,6 +94,14 @@
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
+      "pts": 2,
+      "pj": 1
+    },
+    {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
       "pts": 2,
       "pj": 1
     },
@@ -106,10 +130,10 @@
       "pj": 1
     },
     {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
+      "abrev": "VGK",
+      "nom": "Vegas Golden Knights",
+      "nomFr": "Golden Knights de Vegas",
+      "ville": "Vegas",
       "pts": 2,
       "pj": 2
     },
@@ -130,12 +154,20 @@
       "pj": 2
     },
     {
+      "abrev": "WPG",
+      "nom": "Winnipeg Jets",
+      "nomFr": "Jets de Winnipeg",
+      "ville": "Winnipeg",
+      "pts": 1,
+      "pj": 1
+    },
+    {
       "abrev": "CAR",
       "nom": "Carolina Hurricanes",
       "nomFr": "Hurricanes de la Caroline",
       "ville": "Carolina",
       "pts": 1,
-      "pj": 1
+      "pj": 2
     },
     {
       "abrev": "PHI",
@@ -146,58 +178,10 @@
       "pj": 2
     },
     {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "DAL",
-      "nom": "Dallas Stars",
-      "nomFr": "Stars de Dallas",
-      "ville": "Dallas",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "DET",
-      "nom": "Detroit Red Wings",
-      "nomFr": "Red Wings de Detroit",
-      "ville": "Detroit",
-      "pts": 0,
-      "pj": 0
-    },
-    {
       "abrev": "OTT",
       "nom": "Ottawa Senators",
       "nomFr": "Sénateurs d'Ottawa",
       "ville": "Ottawa",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "STL",
-      "nom": "St. Louis Blues",
-      "nomFr": "Blues de St. Louis",
-      "ville": "St. Louis",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "WSH",
-      "nom": "Washington Capitals",
-      "nomFr": "Capitals de Washington",
-      "ville": "Washington",
-      "pts": 0,
-      "pj": 0
-    },
-    {
-      "abrev": "WPG",
-      "nom": "Winnipeg Jets",
-      "nomFr": "Jets de Winnipeg",
-      "ville": "Winnipeg",
       "pts": 0,
       "pj": 0
     },
@@ -214,6 +198,14 @@
       "nom": "Nashville Predators",
       "nomFr": "Predators de Nashville",
       "ville": "Nashville",
+      "pts": 0,
+      "pj": 1
+    },
+    {
+      "abrev": "DET",
+      "nom": "Detroit Red Wings",
+      "nomFr": "Red Wings de Detroit",
+      "ville": "Detroit",
       "pts": 0,
       "pj": 1
     },
@@ -238,6 +230,14 @@
       "nom": "Tampa Bay Lightning",
       "nomFr": "Lightning de Tampa Bay",
       "ville": "Tampa Bay",
+      "pts": 0,
+      "pj": 1
+    },
+    {
+      "abrev": "DAL",
+      "nom": "Dallas Stars",
+      "nomFr": "Stars de Dallas",
+      "ville": "Dallas",
       "pts": 0,
       "pj": 1
     },
