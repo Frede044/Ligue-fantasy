@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-07T17:07:40Z",
+  "majLe": "2026-10-08T17:05:50Z",
   "equipes": [
     {
       "abrev": "NYR",
@@ -8,6 +8,22 @@
       "ville": "NY Rangers",
       "pts": 8,
       "pj": 5
+    },
+    {
+      "abrev": "EDM",
+      "nom": "Edmonton Oilers",
+      "nomFr": "Oilers d'Edmonton",
+      "ville": "Edmonton",
+      "pts": 7,
+      "pj": 4
+    },
+    {
+      "abrev": "WPG",
+      "nom": "Winnipeg Jets",
+      "nomFr": "Jets de Winnipeg",
+      "ville": "Winnipeg",
+      "pts": 7,
+      "pj": 4
     },
     {
       "abrev": "UTA",
@@ -42,22 +58,6 @@
       "pj": 3
     },
     {
-      "abrev": "EDM",
-      "nom": "Edmonton Oilers",
-      "nomFr": "Oilers d'Edmonton",
-      "ville": "Edmonton",
-      "pts": 5,
-      "pj": 3
-    },
-    {
-      "abrev": "WPG",
-      "nom": "Winnipeg Jets",
-      "nomFr": "Jets de Winnipeg",
-      "ville": "Winnipeg",
-      "pts": 5,
-      "pj": 3
-    },
-    {
       "abrev": "CAR",
       "nom": "Carolina Hurricanes",
       "nomFr": "Hurricanes de la Caroline",
@@ -71,15 +71,15 @@
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
       "pts": 4,
-      "pj": 2
+      "pj": 3
     },
     {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
       "pts": 4,
-      "pj": 2
+      "pj": 3
     },
     {
       "abrev": "OTT",
@@ -98,18 +98,18 @@
       "pj": 3
     },
     {
-      "abrev": "PIT",
-      "nom": "Pittsburgh Penguins",
-      "nomFr": "Penguins de Pittsburgh",
-      "ville": "Pittsburgh",
-      "pts": 4,
-      "pj": 3
-    },
-    {
       "abrev": "BUF",
       "nom": "Buffalo Sabres",
       "nomFr": "Sabres de Buffalo",
       "ville": "Buffalo",
+      "pts": 4,
+      "pj": 3
+    },
+    {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
       "pts": 4,
       "pj": 3
     },
@@ -126,6 +126,14 @@
       "nom": "Seattle Kraken",
       "nomFr": "Kraken de Seattle",
       "ville": "Seattle",
+      "pts": 4,
+      "pj": 4
+    },
+    {
+      "abrev": "PIT",
+      "nom": "Pittsburgh Penguins",
+      "nomFr": "Penguins de Pittsburgh",
+      "ville": "Pittsburgh",
       "pts": 4,
       "pj": 4
     },
@@ -168,14 +176,6 @@
       "ville": "Nashville",
       "pts": 3,
       "pj": 3
-    },
-    {
-      "abrev": "WSH",
-      "nom": "Washington Capitals",
-      "nomFr": "Capitals de Washington",
-      "ville": "Washington",
-      "pts": 2,
-      "pj": 2
     },
     {
       "abrev": "CBJ",
