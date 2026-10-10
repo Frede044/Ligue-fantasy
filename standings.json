@@ -1,14 +1,6 @@
 {
-  "majLe": "2026-10-09T16:43:56Z",
+  "majLe": "2026-10-10T15:38:51Z",
   "equipes": [
-    {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
-      "pts": 8,
-      "pj": 5
-    },
     {
       "abrev": "VGK",
       "nom": "Vegas Golden Knights",
@@ -16,6 +8,14 @@
       "ville": "Vegas",
       "pts": 8,
       "pj": 5
+    },
+    {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 8,
+      "pj": 6
     },
     {
       "abrev": "EDM",
@@ -31,7 +31,7 @@
       "nomFr": "Jets de Winnipeg",
       "ville": "Winnipeg",
       "pts": 7,
-      "pj": 4
+      "pj": 5
     },
     {
       "abrev": "CAR",
@@ -46,6 +46,14 @@
       "nom": "Colorado Avalanche",
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
+      "pts": 6,
+      "pj": 4
+    },
+    {
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
       "pts": 6,
       "pj": 4
     },
@@ -66,6 +74,14 @@
       "pj": 4
     },
     {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
+      "pts": 6,
+      "pj": 4
+    },
+    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
@@ -80,6 +96,14 @@
       "ville": "San Jose",
       "pts": 6,
       "pj": 4
+    },
+    {
+      "abrev": "SEA",
+      "nom": "Seattle Kraken",
+      "nomFr": "Kraken de Seattle",
+      "ville": "Seattle",
+      "pts": 6,
+      "pj": 5
     },
     {
       "abrev": "UTA",
@@ -114,6 +138,14 @@
       "pj": 4
     },
     {
+      "abrev": "PIT",
+      "nom": "Pittsburgh Penguins",
+      "nomFr": "Penguins de Pittsburgh",
+      "ville": "Pittsburgh",
+      "pts": 5,
+      "pj": 5
+    },
+    {
       "abrev": "TOR",
       "nom": "Toronto Maple Leafs",
       "nomFr": "Maple Leafs de Toronto",
@@ -122,18 +154,10 @@
       "pj": 5
     },
     {
-      "abrev": "WSH",
-      "nom": "Washington Capitals",
-      "nomFr": "Capitals de Washington",
-      "ville": "Washington",
-      "pts": 4,
-      "pj": 3
-    },
-    {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
+      "abrev": "CBJ",
+      "nom": "Columbus Blue Jackets",
+      "nomFr": "Blue Jackets de Columbus",
+      "ville": "Columbus",
       "pts": 4,
       "pj": 3
     },
@@ -146,26 +170,10 @@
       "pj": 4
     },
     {
-      "abrev": "SEA",
-      "nom": "Seattle Kraken",
-      "nomFr": "Kraken de Seattle",
-      "ville": "Seattle",
-      "pts": 4,
-      "pj": 4
-    },
-    {
       "abrev": "DAL",
       "nom": "Dallas Stars",
       "nomFr": "Stars de Dallas",
       "ville": "Dallas",
-      "pts": 4,
-      "pj": 4
-    },
-    {
-      "abrev": "PIT",
-      "nom": "Pittsburgh Penguins",
-      "nomFr": "Penguins de Pittsburgh",
-      "ville": "Pittsburgh",
       "pts": 4,
       "pj": 4
     },
@@ -202,12 +210,12 @@
       "pj": 4
     },
     {
-      "abrev": "CBJ",
-      "nom": "Columbus Blue Jackets",
-      "nomFr": "Blue Jackets de Columbus",
-      "ville": "Columbus",
+      "abrev": "NJD",
+      "nom": "New Jersey Devils",
+      "nomFr": "Devils du New Jersey",
+      "ville": "New Jersey",
       "pts": 2,
-      "pj": 2
+      "pj": 3
     },
     {
       "abrev": "DET",
@@ -215,15 +223,7 @@
       "nomFr": "Red Wings de Detroit",
       "ville": "Detroit",
       "pts": 2,
-      "pj": 3
-    },
-    {
-      "abrev": "NJD",
-      "nom": "New Jersey Devils",
-      "nomFr": "Devils du New Jersey",
-      "ville": "New Jersey",
-      "pts": 2,
-      "pj": 3
+      "pj": 4
     },
     {
       "abrev": "CHI",
