@@ -1,6 +1,14 @@
 {
-  "majLe": "2026-10-11T16:04:47Z",
+  "majLe": "2026-10-12T19:32:02Z",
   "equipes": [
+    {
+      "abrev": "CAR",
+      "nom": "Carolina Hurricanes",
+      "nomFr": "Hurricanes de la Caroline",
+      "ville": "Carolina",
+      "pts": 11,
+      "pj": 7
+    },
     {
       "abrev": "VGK",
       "nom": "Vegas Golden Knights",
@@ -10,20 +18,20 @@
       "pj": 6
     },
     {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 10,
+      "pj": 7
+    },
+    {
       "abrev": "EDM",
       "nom": "Edmonton Oilers",
       "nomFr": "Oilers d'Edmonton",
       "ville": "Edmonton",
       "pts": 9,
       "pj": 5
-    },
-    {
-      "abrev": "CAR",
-      "nom": "Carolina Hurricanes",
-      "nomFr": "Hurricanes de la Caroline",
-      "ville": "Carolina",
-      "pts": 9,
-      "pj": 6
     },
     {
       "abrev": "TBL",
@@ -50,18 +58,18 @@
       "pj": 5
     },
     {
-      "abrev": "UTA",
-      "nom": "Utah Mammoth",
-      "nomFr": "Mammoth de l'Utah",
-      "ville": "Utah",
+      "abrev": "SEA",
+      "nom": "Seattle Kraken",
+      "nomFr": "Kraken de Seattle",
+      "ville": "Seattle",
       "pts": 8,
       "pj": 6
     },
     {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
       "pts": 8,
       "pj": 6
     },
@@ -106,14 +114,6 @@
       "pj": 6
     },
     {
-      "abrev": "WSH",
-      "nom": "Washington Capitals",
-      "nomFr": "Capitals de Washington",
-      "ville": "Washington",
-      "pts": 6,
-      "pj": 4
-    },
-    {
       "abrev": "COL",
       "nom": "Colorado Avalanche",
       "nomFr": "Avalanche du Colorado",
@@ -122,10 +122,10 @@
       "pj": 5
     },
     {
-      "abrev": "SEA",
-      "nom": "Seattle Kraken",
-      "nomFr": "Kraken de Seattle",
-      "ville": "Seattle",
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
       "pts": 6,
       "pj": 5
     },
@@ -215,7 +215,7 @@
       "nomFr": "Canucks de Vancouver",
       "ville": "Vancouver",
       "pts": 4,
-      "pj": 6
+      "pj": 7
     },
     {
       "abrev": "DET",
@@ -247,7 +247,7 @@
       "nomFr": "Flyers de Philadelphie",
       "ville": "Philadelphia",
       "pts": 2,
-      "pj": 6
+      "pj": 7
     },
     {
       "abrev": "CGY",
