@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-12T19:32:02Z",
+  "majLe": "2026-10-13T17:16:19Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -10,10 +10,10 @@
       "pj": 7
     },
     {
-      "abrev": "VGK",
-      "nom": "Vegas Golden Knights",
-      "nomFr": "Golden Knights de Vegas",
-      "ville": "Vegas",
+      "abrev": "OTT",
+      "nom": "Ottawa Senators",
+      "nomFr": "Sénateurs d'Ottawa",
+      "ville": "Ottawa",
       "pts": 10,
       "pj": 6
     },
@@ -26,12 +26,28 @@
       "pj": 7
     },
     {
+      "abrev": "VGK",
+      "nom": "Vegas Golden Knights",
+      "nomFr": "Golden Knights de Vegas",
+      "ville": "Vegas",
+      "pts": 10,
+      "pj": 7
+    },
+    {
       "abrev": "EDM",
       "nom": "Edmonton Oilers",
       "nomFr": "Oilers d'Edmonton",
       "ville": "Edmonton",
       "pts": 9,
       "pj": 5
+    },
+    {
+      "abrev": "MIN",
+      "nom": "Minnesota Wild",
+      "nomFr": "Wild du Minnesota",
+      "ville": "Minnesota",
+      "pts": 9,
+      "pj": 6
     },
     {
       "abrev": "TBL",
@@ -46,14 +62,6 @@
       "nom": "Anaheim Ducks",
       "nomFr": "Ducks d'Anaheim",
       "ville": "Anaheim",
-      "pts": 8,
-      "pj": 5
-    },
-    {
-      "abrev": "OTT",
-      "nom": "Ottawa Senators",
-      "nomFr": "Sénateurs d'Ottawa",
-      "ville": "Ottawa",
       "pts": 8,
       "pj": 5
     },
@@ -80,14 +88,6 @@
       "ville": "Boston",
       "pts": 8,
       "pj": 6
-    },
-    {
-      "abrev": "MIN",
-      "nom": "Minnesota Wild",
-      "nomFr": "Wild du Minnesota",
-      "ville": "Minnesota",
-      "pts": 7,
-      "pj": 5
     },
     {
       "abrev": "WPG",
@@ -138,20 +138,28 @@
       "pj": 5
     },
     {
-      "abrev": "FLA",
-      "nom": "Florida Panthers",
-      "nomFr": "Panthers de la Floride",
-      "ville": "Florida",
-      "pts": 6,
-      "pj": 5
-    },
-    {
       "abrev": "SJS",
       "nom": "San Jose Sharks",
       "nomFr": "Sharks de San Jose",
       "ville": "San Jose",
       "pts": 6,
       "pj": 5
+    },
+    {
+      "abrev": "BUF",
+      "nom": "Buffalo Sabres",
+      "nomFr": "Sabres de Buffalo",
+      "ville": "Buffalo",
+      "pts": 6,
+      "pj": 6
+    },
+    {
+      "abrev": "FLA",
+      "nom": "Florida Panthers",
+      "nomFr": "Panthers de la Floride",
+      "ville": "Florida",
+      "pts": 6,
+      "pj": 6
     },
     {
       "abrev": "DAL",
@@ -178,14 +186,6 @@
       "pj": 5
     },
     {
-      "abrev": "NJD",
-      "nom": "New Jersey Devils",
-      "nomFr": "Devils du New Jersey",
-      "ville": "New Jersey",
-      "pts": 4,
-      "pj": 4
-    },
-    {
       "abrev": "CBJ",
       "nom": "Columbus Blue Jackets",
       "nomFr": "Blue Jackets de Columbus",
@@ -202,10 +202,10 @@
       "pj": 5
     },
     {
-      "abrev": "BUF",
-      "nom": "Buffalo Sabres",
-      "nomFr": "Sabres de Buffalo",
-      "ville": "Buffalo",
+      "abrev": "NJD",
+      "nom": "New Jersey Devils",
+      "nomFr": "Devils du New Jersey",
+      "ville": "New Jersey",
       "pts": 4,
       "pj": 5
     },
