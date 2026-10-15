@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-14T14:48:08Z",
+  "majLe": "2026-10-15T14:34:26Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -74,20 +74,20 @@
       "pj": 6
     },
     {
+      "abrev": "COL",
+      "nom": "Colorado Avalanche",
+      "nomFr": "Avalanche du Colorado",
+      "ville": "Colorado",
+      "pts": 9,
+      "pj": 7
+    },
+    {
       "abrev": "MIN",
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
       "pts": 9,
       "pj": 7
-    },
-    {
-      "abrev": "COL",
-      "nom": "Colorado Avalanche",
-      "nomFr": "Avalanche du Colorado",
-      "ville": "Colorado",
-      "pts": 8,
-      "pj": 6
     },
     {
       "abrev": "TBL",
@@ -106,6 +106,14 @@
       "pj": 6
     },
     {
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
+      "pts": 8,
+      "pj": 7
+    },
+    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
@@ -118,14 +126,6 @@
       "nom": "St. Louis Blues",
       "nomFr": "Blues de St. Louis",
       "ville": "St. Louis",
-      "pts": 7,
-      "pj": 6
-    },
-    {
-      "abrev": "MTL",
-      "nom": "Montréal Canadiens",
-      "nomFr": "Canadiens de Montréal",
-      "ville": "Montréal",
       "pts": 7,
       "pj": 6
     },
@@ -146,6 +146,14 @@
       "pj": 7
     },
     {
+      "abrev": "DAL",
+      "nom": "Dallas Stars",
+      "nomFr": "Stars de Dallas",
+      "ville": "Dallas",
+      "pts": 7,
+      "pj": 7
+    },
+    {
       "abrev": "PIT",
       "nom": "Pittsburgh Penguins",
       "nomFr": "Penguins de Pittsburgh",
@@ -154,18 +162,18 @@
       "pj": 7
     },
     {
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
+      "pts": 7,
+      "pj": 7
+    },
+    {
       "abrev": "NYI",
       "nom": "New York Islanders",
       "nomFr": "Islanders de New York",
       "ville": "NY Islanders",
-      "pts": 6,
-      "pj": 6
-    },
-    {
-      "abrev": "WSH",
-      "nom": "Washington Capitals",
-      "nomFr": "Capitals de Washington",
-      "ville": "Washington",
       "pts": 6,
       "pj": 6
     },
@@ -191,14 +199,6 @@
       "nomFr": "Sharks de San Jose",
       "ville": "San Jose",
       "pts": 6,
-      "pj": 6
-    },
-    {
-      "abrev": "DAL",
-      "nom": "Dallas Stars",
-      "nomFr": "Stars de Dallas",
-      "ville": "Dallas",
-      "pts": 5,
       "pj": 6
     },
     {
