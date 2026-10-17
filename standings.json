@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-16T14:25:49Z",
+  "majLe": "2026-10-17T13:23:12Z",
   "equipes": [
     {
       "abrev": "VGK",
@@ -22,6 +22,14 @@
       "nom": "Utah Mammoth",
       "nomFr": "Mammoth de l'Utah",
       "ville": "Utah",
+      "pts": 12,
+      "pj": 8
+    },
+    {
+      "abrev": "BOS",
+      "nom": "Boston Bruins",
+      "nomFr": "Bruins de Boston",
+      "ville": "Boston",
       "pts": 12,
       "pj": 8
     },
@@ -50,6 +58,14 @@
       "pj": 7
     },
     {
+      "abrev": "COL",
+      "nom": "Colorado Avalanche",
+      "nomFr": "Avalanche du Colorado",
+      "ville": "Colorado",
+      "pts": 11,
+      "pj": 8
+    },
+    {
       "abrev": "MIN",
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
@@ -64,14 +80,6 @@
       "ville": "Seattle",
       "pts": 11,
       "pj": 8
-    },
-    {
-      "abrev": "BOS",
-      "nom": "Boston Bruins",
-      "nomFr": "Bruins de Boston",
-      "ville": "Boston",
-      "pts": 10,
-      "pj": 7
     },
     {
       "abrev": "TBL",
@@ -98,14 +106,6 @@
       "pj": 8
     },
     {
-      "abrev": "COL",
-      "nom": "Colorado Avalanche",
-      "nomFr": "Avalanche du Colorado",
-      "ville": "Colorado",
-      "pts": 9,
-      "pj": 7
-    },
-    {
       "abrev": "BUF",
       "nom": "Buffalo Sabres",
       "nomFr": "Sabres de Buffalo",
@@ -114,18 +114,18 @@
       "pj": 8
     },
     {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
-      "pts": 8,
-      "pj": 6
-    },
-    {
       "abrev": "WSH",
       "nom": "Washington Capitals",
       "nomFr": "Capitals de Washington",
       "ville": "Washington",
+      "pts": 8,
+      "pj": 7
+    },
+    {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
       "pts": 8,
       "pj": 7
     },
@@ -186,20 +186,20 @@
       "pj": 7
     },
     {
-      "abrev": "PIT",
-      "nom": "Pittsburgh Penguins",
-      "nomFr": "Penguins de Pittsburgh",
-      "ville": "Pittsburgh",
-      "pts": 7,
-      "pj": 7
-    },
-    {
       "abrev": "MTL",
       "nom": "Montréal Canadiens",
       "nomFr": "Canadiens de Montréal",
       "ville": "Montréal",
       "pts": 7,
       "pj": 7
+    },
+    {
+      "abrev": "PIT",
+      "nom": "Pittsburgh Penguins",
+      "nomFr": "Penguins de Pittsburgh",
+      "ville": "Pittsburgh",
+      "pts": 7,
+      "pj": 8
     },
     {
       "abrev": "DET",
