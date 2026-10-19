@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-18T13:41:50Z",
+  "majLe": "2026-10-19T16:43:29Z",
   "equipes": [
     {
       "abrev": "VGK",
@@ -15,7 +15,7 @@
       "nomFr": "Hurricanes de la Caroline",
       "ville": "Carolina",
       "pts": 15,
-      "pj": 9
+      "pj": 10
     },
     {
       "abrev": "BOS",
@@ -32,6 +32,14 @@
       "ville": "Edmonton",
       "pts": 13,
       "pj": 8
+    },
+    {
+      "abrev": "MIN",
+      "nom": "Minnesota Wild",
+      "nomFr": "Wild du Minnesota",
+      "ville": "Minnesota",
+      "pts": 13,
+      "pj": 9
     },
     {
       "abrev": "NYR",
@@ -78,14 +86,6 @@
       "nom": "Colorado Avalanche",
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
-      "pts": 11,
-      "pj": 8
-    },
-    {
-      "abrev": "MIN",
-      "nom": "Minnesota Wild",
-      "nomFr": "Wild du Minnesota",
-      "ville": "Minnesota",
       "pts": 11,
       "pj": 8
     },
@@ -215,7 +215,7 @@
       "nomFr": "Blue Jackets de Columbus",
       "ville": "Columbus",
       "pts": 6,
-      "pj": 6
+      "pj": 7
     },
     {
       "abrev": "CHI",
@@ -242,20 +242,20 @@
       "pj": 10
     },
     {
+      "abrev": "CGY",
+      "nom": "Calgary Flames",
+      "nomFr": "Flames de Calgary",
+      "ville": "Calgary",
+      "pts": 4,
+      "pj": 8
+    },
+    {
       "abrev": "LAK",
       "nom": "Los Angeles Kings",
       "nomFr": "Kings de Los Angeles",
       "ville": "Los Angeles",
       "pts": 2,
       "pj": 6
-    },
-    {
-      "abrev": "CGY",
-      "nom": "Calgary Flames",
-      "nomFr": "Flames de Calgary",
-      "ville": "Calgary",
-      "pts": 2,
-      "pj": 7
     }
   ]
 }
