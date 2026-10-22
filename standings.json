@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-21T14:46:49Z",
+  "majLe": "2026-10-22T14:46:58Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -66,6 +66,14 @@
       "pj": 10
     },
     {
+      "abrev": "OTT",
+      "nom": "Ottawa Senators",
+      "nomFr": "Sénateurs d'Ottawa",
+      "ville": "Ottawa",
+      "pts": 14,
+      "pj": 10
+    },
+    {
       "abrev": "SEA",
       "nom": "Seattle Kraken",
       "nomFr": "Kraken de Seattle",
@@ -74,20 +82,12 @@
       "pj": 10
     },
     {
-      "abrev": "OTT",
-      "nom": "Ottawa Senators",
-      "nomFr": "Sénateurs d'Ottawa",
-      "ville": "Ottawa",
-      "pts": 12,
-      "pj": 9
-    },
-    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
       "ville": "Florida",
       "pts": 12,
-      "pj": 9
+      "pj": 10
     },
     {
       "abrev": "TOR",
@@ -154,20 +154,20 @@
       "pj": 9
     },
     {
-      "abrev": "BUF",
-      "nom": "Buffalo Sabres",
-      "nomFr": "Sabres de Buffalo",
-      "ville": "Buffalo",
-      "pts": 10,
-      "pj": 9
-    },
-    {
       "abrev": "MTL",
       "nom": "Montréal Canadiens",
       "nomFr": "Canadiens de Montréal",
       "ville": "Montréal",
       "pts": 10,
       "pj": 9
+    },
+    {
+      "abrev": "BUF",
+      "nom": "Buffalo Sabres",
+      "nomFr": "Sabres de Buffalo",
+      "ville": "Buffalo",
+      "pts": 10,
+      "pj": 10
     },
     {
       "abrev": "NSH",
@@ -194,6 +194,14 @@
       "pj": 9
     },
     {
+      "abrev": "PHI",
+      "nom": "Philadelphia Flyers",
+      "nomFr": "Flyers de Philadelphie",
+      "ville": "Philadelphia",
+      "pts": 9,
+      "pj": 12
+    },
+    {
       "abrev": "ANA",
       "nom": "Anaheim Ducks",
       "nomFr": "Ducks d'Anaheim",
@@ -208,14 +216,6 @@
       "ville": "Pittsburgh",
       "pts": 7,
       "pj": 10
-    },
-    {
-      "abrev": "PHI",
-      "nom": "Philadelphia Flyers",
-      "nomFr": "Flyers de Philadelphie",
-      "ville": "Philadelphia",
-      "pts": 7,
-      "pj": 11
     },
     {
       "abrev": "CBJ",
