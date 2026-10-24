@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-23T14:33:38Z",
+  "majLe": "2026-10-24T13:45:29Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -55,7 +55,7 @@
       "nomFr": "Lightning de Tampa Bay",
       "ville": "Tampa Bay",
       "pts": 14,
-      "pj": 9
+      "pj": 10
     },
     {
       "abrev": "UTA",
@@ -98,6 +98,14 @@
       "pj": 10
     },
     {
+      "abrev": "COL",
+      "nom": "Colorado Avalanche",
+      "nomFr": "Avalanche du Colorado",
+      "ville": "Colorado",
+      "pts": 13,
+      "pj": 11
+    },
+    {
       "abrev": "SJS",
       "nom": "San Jose Sharks",
       "nomFr": "Sharks de San Jose",
@@ -122,20 +130,20 @@
       "pj": 10
     },
     {
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
+      "pts": 12,
+      "pj": 10
+    },
+    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
       "ville": "Florida",
       "pts": 12,
       "pj": 11
-    },
-    {
-      "abrev": "COL",
-      "nom": "Colorado Avalanche",
-      "nomFr": "Avalanche du Colorado",
-      "ville": "Colorado",
-      "pts": 11,
-      "pj": 10
     },
     {
       "abrev": "STL",
@@ -166,14 +174,6 @@
       "nom": "Washington Capitals",
       "nomFr": "Capitals de Washington",
       "ville": "Washington",
-      "pts": 10,
-      "pj": 9
-    },
-    {
-      "abrev": "MTL",
-      "nom": "Montréal Canadiens",
-      "nomFr": "Canadiens de Montréal",
-      "ville": "Montréal",
       "pts": 10,
       "pj": 9
     },
@@ -247,7 +247,7 @@
       "nomFr": "Blackhawks de Chicago",
       "ville": "Chicago",
       "pts": 6,
-      "pj": 9
+      "pj": 10
     },
     {
       "abrev": "VAN",
