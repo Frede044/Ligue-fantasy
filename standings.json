@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-25T14:01:46Z",
+  "majLe": "2026-10-26T16:23:32Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -16,6 +16,14 @@
       "ville": "Boston",
       "pts": 19,
       "pj": 12
+    },
+    {
+      "abrev": "MIN",
+      "nom": "Minnesota Wild",
+      "nomFr": "Wild du Minnesota",
+      "ville": "Minnesota",
+      "pts": 18,
+      "pj": 13
     },
     {
       "abrev": "EDM",
@@ -38,14 +46,6 @@
       "nom": "Utah Mammoth",
       "nomFr": "Mammoth de l'Utah",
       "ville": "Utah",
-      "pts": 16,
-      "pj": 12
-    },
-    {
-      "abrev": "MIN",
-      "nom": "Minnesota Wild",
-      "nomFr": "Wild du Minnesota",
-      "ville": "Minnesota",
       "pts": 16,
       "pj": 12
     },
@@ -74,6 +74,14 @@
       "pj": 11
     },
     {
+      "abrev": "DAL",
+      "nom": "Dallas Stars",
+      "nomFr": "Stars de Dallas",
+      "ville": "Dallas",
+      "pts": 15,
+      "pj": 11
+    },
+    {
       "abrev": "SEA",
       "nom": "Seattle Kraken",
       "nomFr": "Kraken de Seattle",
@@ -98,12 +106,20 @@
       "pj": 11
     },
     {
-      "abrev": "DAL",
-      "nom": "Dallas Stars",
-      "nomFr": "Stars de Dallas",
-      "ville": "Dallas",
-      "pts": 13,
-      "pj": 10
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
+      "pts": 14,
+      "pj": 11
+    },
+    {
+      "abrev": "FLA",
+      "nom": "Florida Panthers",
+      "nomFr": "Panthers de la Floride",
+      "ville": "Florida",
+      "pts": 14,
+      "pj": 12
     },
     {
       "abrev": "COL",
@@ -111,7 +127,7 @@
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
       "pts": 13,
-      "pj": 11
+      "pj": 12
     },
     {
       "abrev": "SJS",
@@ -135,22 +151,22 @@
       "nomFr": "Islanders de New York",
       "ville": "NY Islanders",
       "pts": 12,
-      "pj": 10
+      "pj": 11
     },
     {
-      "abrev": "MTL",
-      "nom": "Montréal Canadiens",
-      "nomFr": "Canadiens de Montréal",
-      "ville": "Montréal",
+      "abrev": "NSH",
+      "nom": "Nashville Predators",
+      "nomFr": "Predators de Nashville",
+      "ville": "Nashville",
       "pts": 12,
-      "pj": 10
+      "pj": 11
     },
     {
-      "abrev": "FLA",
-      "nom": "Florida Panthers",
-      "nomFr": "Panthers de la Floride",
-      "ville": "Florida",
-      "pts": 12,
+      "abrev": "STL",
+      "nom": "St. Louis Blues",
+      "nomFr": "Blues de St. Louis",
+      "ville": "St. Louis",
+      "pts": 11,
       "pj": 11
     },
     {
@@ -158,14 +174,6 @@
       "nom": "Winnipeg Jets",
       "nomFr": "Jets de Winnipeg",
       "ville": "Winnipeg",
-      "pts": 11,
-      "pj": 10
-    },
-    {
-      "abrev": "STL",
-      "nom": "St. Louis Blues",
-      "nomFr": "Blues de St. Louis",
-      "ville": "St. Louis",
       "pts": 11,
       "pj": 11
     },
@@ -192,14 +200,6 @@
       "ville": "Pittsburgh",
       "pts": 11,
       "pj": 12
-    },
-    {
-      "abrev": "NSH",
-      "nom": "Nashville Predators",
-      "nomFr": "Predators de Nashville",
-      "ville": "Nashville",
-      "pts": 10,
-      "pj": 10
     },
     {
       "abrev": "ANA",
@@ -247,7 +247,7 @@
       "nomFr": "Blackhawks de Chicago",
       "ville": "Chicago",
       "pts": 6,
-      "pj": 10
+      "pj": 11
     },
     {
       "abrev": "VAN",
@@ -255,7 +255,7 @@
       "nomFr": "Canucks de Vancouver",
       "ville": "Vancouver",
       "pts": 5,
-      "pj": 12
+      "pj": 13
     }
   ]
 }
