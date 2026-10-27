@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-26T16:23:32Z",
+  "majLe": "2026-10-27T15:38:27Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -18,20 +18,20 @@
       "pj": 12
     },
     {
+      "abrev": "EDM",
+      "nom": "Edmonton Oilers",
+      "nomFr": "Oilers d'Edmonton",
+      "ville": "Edmonton",
+      "pts": 18,
+      "pj": 12
+    },
+    {
       "abrev": "MIN",
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
       "pts": 18,
       "pj": 13
-    },
-    {
-      "abrev": "EDM",
-      "nom": "Edmonton Oilers",
-      "nomFr": "Oilers d'Edmonton",
-      "ville": "Edmonton",
-      "pts": 17,
-      "pj": 11
     },
     {
       "abrev": "VGK",
@@ -63,7 +63,7 @@
       "nomFr": "Maple Leafs de Toronto",
       "ville": "Toronto",
       "pts": 16,
-      "pj": 13
+      "pj": 14
     },
     {
       "abrev": "TBL",
@@ -95,7 +95,7 @@
       "nomFr": "Rangers de New York",
       "ville": "NY Rangers",
       "pts": 15,
-      "pj": 13
+      "pj": 14
     },
     {
       "abrev": "NJD",
@@ -126,6 +126,14 @@
       "nom": "Colorado Avalanche",
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
+      "pts": 13,
+      "pj": 12
+    },
+    {
+      "abrev": "DET",
+      "nom": "Detroit Red Wings",
+      "nomFr": "Red Wings de Detroit",
+      "ville": "Detroit",
       "pts": 13,
       "pj": 12
     },
@@ -178,14 +186,6 @@
       "pj": 11
     },
     {
-      "abrev": "DET",
-      "nom": "Detroit Red Wings",
-      "nomFr": "Red Wings de Detroit",
-      "ville": "Detroit",
-      "pts": 11,
-      "pj": 11
-    },
-    {
       "abrev": "BUF",
       "nom": "Buffalo Sabres",
       "nomFr": "Sabres de Buffalo",
@@ -200,6 +200,14 @@
       "ville": "Pittsburgh",
       "pts": 11,
       "pj": 12
+    },
+    {
+      "abrev": "CGY",
+      "nom": "Calgary Flames",
+      "nomFr": "Flames de Calgary",
+      "ville": "Calgary",
+      "pts": 10,
+      "pj": 11
     },
     {
       "abrev": "ANA",
@@ -226,20 +234,12 @@
       "pj": 9
     },
     {
-      "abrev": "CGY",
-      "nom": "Calgary Flames",
-      "nomFr": "Flames de Calgary",
-      "ville": "Calgary",
-      "pts": 8,
-      "pj": 10
-    },
-    {
       "abrev": "LAK",
       "nom": "Los Angeles Kings",
       "nomFr": "Kings de Los Angeles",
       "ville": "Los Angeles",
-      "pts": 6,
-      "pj": 9
+      "pts": 8,
+      "pj": 10
     },
     {
       "abrev": "CHI",
