@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-10-30T16:23:30Z",
+  "majLe": "2026-10-31T15:33:54Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -39,7 +39,7 @@
       "nomFr": "Golden Knights de Vegas",
       "ville": "Vegas",
       "pts": 19,
-      "pj": 14
+      "pj": 15
     },
     {
       "abrev": "MTL",
@@ -50,10 +50,26 @@
       "pj": 13
     },
     {
+      "abrev": "NJD",
+      "nom": "New Jersey Devils",
+      "nomFr": "Devils du New Jersey",
+      "ville": "New Jersey",
+      "pts": 18,
+      "pj": 14
+    },
+    {
       "abrev": "UTA",
       "nom": "Utah Mammoth",
       "nomFr": "Mammoth de l'Utah",
       "ville": "Utah",
+      "pts": 18,
+      "pj": 14
+    },
+    {
+      "abrev": "FLA",
+      "nom": "Florida Panthers",
+      "nomFr": "Panthers de la Floride",
+      "ville": "Florida",
       "pts": 18,
       "pj": 14
     },
@@ -71,7 +87,7 @@
       "nomFr": "Kraken de Seattle",
       "ville": "Seattle",
       "pts": 17,
-      "pj": 13
+      "pj": 14
     },
     {
       "abrev": "OTT",
@@ -88,22 +104,6 @@
       "ville": "Washington",
       "pts": 16,
       "pj": 12
-    },
-    {
-      "abrev": "NJD",
-      "nom": "New Jersey Devils",
-      "nomFr": "Devils du New Jersey",
-      "ville": "New Jersey",
-      "pts": 16,
-      "pj": 13
-    },
-    {
-      "abrev": "FLA",
-      "nom": "Florida Panthers",
-      "nomFr": "Panthers de la Floride",
-      "ville": "Florida",
-      "pts": 16,
-      "pj": 13
     },
     {
       "abrev": "NYI",
@@ -186,6 +186,14 @@
       "pj": 13
     },
     {
+      "abrev": "CGY",
+      "nom": "Calgary Flames",
+      "nomFr": "Flames de Calgary",
+      "ville": "Calgary",
+      "pts": 12,
+      "pj": 13
+    },
+    {
       "abrev": "PIT",
       "nom": "Pittsburgh Penguins",
       "nomFr": "Penguins de Pittsburgh",
@@ -207,7 +215,7 @@
       "nomFr": "Jets de Winnipeg",
       "ville": "Winnipeg",
       "pts": 11,
-      "pj": 13
+      "pj": 14
     },
     {
       "abrev": "CBJ",
@@ -216,14 +224,6 @@
       "ville": "Columbus",
       "pts": 10,
       "pj": 11
-    },
-    {
-      "abrev": "CGY",
-      "nom": "Calgary Flames",
-      "nomFr": "Flames de Calgary",
-      "ville": "Calgary",
-      "pts": 10,
-      "pj": 12
     },
     {
       "abrev": "LAK",
