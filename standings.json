@@ -1,29 +1,29 @@
 {
-  "majLe": "2026-11-01T16:31:09Z",
+  "majLe": "2026-11-02T19:54:29Z",
   "equipes": [
     {
       "abrev": "CAR",
       "nom": "Carolina Hurricanes",
       "nomFr": "Hurricanes de la Caroline",
       "ville": "Carolina",
-      "pts": 24,
-      "pj": 15
+      "pts": 26,
+      "pj": 16
     },
     {
       "abrev": "EDM",
       "nom": "Edmonton Oilers",
       "nomFr": "Oilers d'Edmonton",
       "ville": "Edmonton",
-      "pts": 22,
-      "pj": 14
+      "pts": 24,
+      "pj": 15
     },
     {
       "abrev": "MIN",
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
-      "pts": 21,
-      "pj": 15
+      "pts": 23,
+      "pj": 16
     },
     {
       "abrev": "BOS",
@@ -55,7 +55,7 @@
       "nomFr": "Sénateurs d'Ottawa",
       "ville": "Ottawa",
       "pts": 19,
-      "pj": 15
+      "pj": 16
     },
     {
       "abrev": "TBL",
@@ -74,20 +74,20 @@
       "pj": 14
     },
     {
-      "abrev": "UTA",
-      "nom": "Utah Mammoth",
-      "nomFr": "Mammoth de l'Utah",
-      "ville": "Utah",
-      "pts": 18,
-      "pj": 14
-    },
-    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
       "ville": "Florida",
       "pts": 18,
       "pj": 14
+    },
+    {
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
+      "pts": 18,
+      "pj": 15
     },
     {
       "abrev": "TOR",
@@ -135,7 +135,7 @@
       "nomFr": "Capitals de Washington",
       "ville": "Washington",
       "pts": 16,
-      "pj": 12
+      "pj": 13
     },
     {
       "abrev": "NYI",
@@ -143,14 +143,6 @@
       "nomFr": "Islanders de New York",
       "ville": "NY Islanders",
       "pts": 16,
-      "pj": 14
-    },
-    {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
-      "pts": 15,
       "pj": 14
     },
     {
@@ -178,12 +170,28 @@
       "pj": 14
     },
     {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 15,
+      "pj": 15
+    },
+    {
       "abrev": "SJS",
       "nom": "San Jose Sharks",
       "nomFr": "Sharks de San Jose",
       "ville": "San Jose",
       "pts": 15,
       "pj": 15
+    },
+    {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
+      "pts": 13,
+      "pj": 14
     },
     {
       "abrev": "CGY",
@@ -202,12 +210,12 @@
       "pj": 14
     },
     {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
-      "pts": 11,
-      "pj": 13
+      "abrev": "PHI",
+      "nom": "Philadelphia Flyers",
+      "nomFr": "Flyers de Philadelphie",
+      "ville": "Philadelphia",
+      "pts": 12,
+      "pj": 16
     },
     {
       "abrev": "WPG",
@@ -215,7 +223,7 @@
       "nomFr": "Jets de Winnipeg",
       "ville": "Winnipeg",
       "pts": 11,
-      "pj": 14
+      "pj": 15
     },
     {
       "abrev": "CBJ",
@@ -232,14 +240,6 @@
       "ville": "Los Angeles",
       "pts": 10,
       "pj": 13
-    },
-    {
-      "abrev": "PHI",
-      "nom": "Philadelphia Flyers",
-      "nomFr": "Flyers de Philadelphie",
-      "ville": "Philadelphia",
-      "pts": 10,
-      "pj": 15
     },
     {
       "abrev": "CHI",
