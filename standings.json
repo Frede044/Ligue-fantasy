@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-11-03T17:27:03Z",
+  "majLe": "2026-11-04T12:29:04Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -7,23 +7,23 @@
       "nomFr": "Hurricanes de la Caroline",
       "ville": "Carolina",
       "pts": 26,
-      "pj": 16
+      "pj": 17
     },
     {
       "abrev": "EDM",
       "nom": "Edmonton Oilers",
       "nomFr": "Oilers d'Edmonton",
       "ville": "Edmonton",
-      "pts": 24,
-      "pj": 15
+      "pts": 25,
+      "pj": 16
     },
     {
       "abrev": "MIN",
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
-      "pts": 23,
-      "pj": 16
+      "pts": 25,
+      "pj": 17
     },
     {
       "abrev": "BOS",
@@ -34,20 +34,52 @@
       "pj": 16
     },
     {
-      "abrev": "MTL",
-      "nom": "Montréal Canadiens",
-      "nomFr": "Canadiens de Montréal",
-      "ville": "Montréal",
-      "pts": 20,
-      "pj": 14
-    },
-    {
       "abrev": "VGK",
       "nom": "Vegas Golden Knights",
       "nomFr": "Golden Knights de Vegas",
       "ville": "Vegas",
+      "pts": 22,
+      "pj": 17
+    },
+    {
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
+      "pts": 21,
+      "pj": 15
+    },
+    {
+      "abrev": "TBL",
+      "nom": "Tampa Bay Lightning",
+      "nomFr": "Lightning de Tampa Bay",
+      "ville": "Tampa Bay",
+      "pts": 20,
+      "pj": 14
+    },
+    {
+      "abrev": "NJD",
+      "nom": "New Jersey Devils",
+      "nomFr": "Devils du New Jersey",
+      "ville": "New Jersey",
+      "pts": 20,
+      "pj": 15
+    },
+    {
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
       "pts": 20,
       "pj": 16
+    },
+    {
+      "abrev": "DAL",
+      "nom": "Dallas Stars",
+      "nomFr": "Stars de Dallas",
+      "ville": "Dallas",
+      "pts": 19,
+      "pj": 15
     },
     {
       "abrev": "COL",
@@ -55,7 +87,7 @@
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
       "pts": 19,
-      "pj": 15
+      "pj": 16
     },
     {
       "abrev": "OTT",
@@ -64,30 +96,6 @@
       "ville": "Ottawa",
       "pts": 19,
       "pj": 16
-    },
-    {
-      "abrev": "TBL",
-      "nom": "Tampa Bay Lightning",
-      "nomFr": "Lightning de Tampa Bay",
-      "ville": "Tampa Bay",
-      "pts": 18,
-      "pj": 13
-    },
-    {
-      "abrev": "NJD",
-      "nom": "New Jersey Devils",
-      "nomFr": "Devils du New Jersey",
-      "ville": "New Jersey",
-      "pts": 18,
-      "pj": 14
-    },
-    {
-      "abrev": "UTA",
-      "nom": "Utah Mammoth",
-      "nomFr": "Mammoth de l'Utah",
-      "ville": "Utah",
-      "pts": 18,
-      "pj": 15
     },
     {
       "abrev": "FLA",
@@ -103,21 +111,13 @@
       "nomFr": "Maple Leafs de Toronto",
       "ville": "Toronto",
       "pts": 18,
-      "pj": 16
+      "pj": 17
     },
     {
       "abrev": "SEA",
       "nom": "Seattle Kraken",
       "nomFr": "Kraken de Seattle",
       "ville": "Seattle",
-      "pts": 17,
-      "pj": 14
-    },
-    {
-      "abrev": "DAL",
-      "nom": "Dallas Stars",
-      "nomFr": "Stars de Dallas",
-      "ville": "Dallas",
       "pts": 17,
       "pj": 14
     },
@@ -130,12 +130,28 @@
       "pj": 14
     },
     {
+      "abrev": "NSH",
+      "nom": "Nashville Predators",
+      "nomFr": "Predators de Nashville",
+      "ville": "Nashville",
+      "pts": 17,
+      "pj": 15
+    },
+    {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 17,
+      "pj": 16
+    },
+    {
       "abrev": "DET",
       "nom": "Detroit Red Wings",
       "nomFr": "Red Wings de Detroit",
       "ville": "Detroit",
       "pts": 17,
-      "pj": 15
+      "pj": 16
     },
     {
       "abrev": "WSH",
@@ -143,7 +159,7 @@
       "nomFr": "Capitals de Washington",
       "ville": "Washington",
       "pts": 16,
-      "pj": 13
+      "pj": 14
     },
     {
       "abrev": "NYI",
@@ -159,21 +175,13 @@
       "nomFr": "Blues de St. Louis",
       "ville": "St. Louis",
       "pts": 15,
-      "pj": 14
+      "pj": 15
     },
     {
-      "abrev": "NSH",
-      "nom": "Nashville Predators",
-      "nomFr": "Predators de Nashville",
-      "ville": "Nashville",
-      "pts": 15,
-      "pj": 14
-    },
-    {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
       "pts": 15,
       "pj": 15
     },
@@ -194,12 +202,20 @@
       "pj": 15
     },
     {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
+      "abrev": "WPG",
+      "nom": "Winnipeg Jets",
+      "nomFr": "Jets de Winnipeg",
+      "ville": "Winnipeg",
       "pts": 13,
-      "pj": 14
+      "pj": 16
+    },
+    {
+      "abrev": "CBJ",
+      "nom": "Columbus Blue Jackets",
+      "nomFr": "Blue Jackets de Columbus",
+      "ville": "Columbus",
+      "pts": 12,
+      "pj": 13
     },
     {
       "abrev": "PIT",
@@ -207,7 +223,7 @@
       "nomFr": "Penguins de Pittsburgh",
       "ville": "Pittsburgh",
       "pts": 12,
-      "pj": 14
+      "pj": 15
     },
     {
       "abrev": "PHI",
@@ -215,23 +231,7 @@
       "nomFr": "Flyers de Philadelphie",
       "ville": "Philadelphia",
       "pts": 12,
-      "pj": 16
-    },
-    {
-      "abrev": "WPG",
-      "nom": "Winnipeg Jets",
-      "nomFr": "Jets de Winnipeg",
-      "ville": "Winnipeg",
-      "pts": 11,
-      "pj": 15
-    },
-    {
-      "abrev": "CBJ",
-      "nom": "Columbus Blue Jackets",
-      "nomFr": "Blue Jackets de Columbus",
-      "ville": "Columbus",
-      "pts": 10,
-      "pj": 12
+      "pj": 17
     },
     {
       "abrev": "LAK",
@@ -255,7 +255,7 @@
       "nomFr": "Canucks de Vancouver",
       "ville": "Vancouver",
       "pts": 7,
-      "pj": 16
+      "pj": 17
     }
   ]
 }
