@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-11-06T17:03:31Z",
+  "majLe": "2026-11-07T15:59:39Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -14,8 +14,8 @@
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
-      "pts": 25,
-      "pj": 17
+      "pts": 27,
+      "pj": 18
     },
     {
       "abrev": "BOS",
@@ -114,6 +114,14 @@
       "pj": 15
     },
     {
+      "abrev": "BUF",
+      "nom": "Buffalo Sabres",
+      "nomFr": "Sabres de Buffalo",
+      "ville": "Buffalo",
+      "pts": 19,
+      "pj": 16
+    },
+    {
       "abrev": "NSH",
       "nom": "Nashville Predators",
       "nomFr": "Predators de Nashville",
@@ -130,28 +138,20 @@
       "pj": 17
     },
     {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
+      "pts": 19,
+      "pj": 17
+    },
+    {
       "abrev": "TOR",
       "nom": "Toronto Maple Leafs",
       "nomFr": "Maple Leafs de Toronto",
       "ville": "Toronto",
       "pts": 18,
       "pj": 17
-    },
-    {
-      "abrev": "BUF",
-      "nom": "Buffalo Sabres",
-      "nomFr": "Sabres de Buffalo",
-      "ville": "Buffalo",
-      "pts": 17,
-      "pj": 15
-    },
-    {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
-      "pts": 17,
-      "pj": 16
     },
     {
       "abrev": "DET",
@@ -191,7 +191,7 @@
       "nomFr": "Flames de Calgary",
       "ville": "Calgary",
       "pts": 15,
-      "pj": 16
+      "pj": 17
     },
     {
       "abrev": "WPG",
@@ -207,7 +207,7 @@
       "nomFr": "Sharks de San Jose",
       "ville": "San Jose",
       "pts": 15,
-      "pj": 17
+      "pj": 18
     },
     {
       "abrev": "CBJ",
@@ -215,7 +215,7 @@
       "nomFr": "Blue Jackets de Columbus",
       "ville": "Columbus",
       "pts": 14,
-      "pj": 14
+      "pj": 15
     },
     {
       "abrev": "LAK",
