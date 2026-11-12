@@ -1,6 +1,14 @@
 {
-  "majLe": "2026-11-11T17:36:18Z",
+  "majLe": "2026-11-12T13:59:58Z",
   "equipes": [
+    {
+      "abrev": "EDM",
+      "nom": "Edmonton Oilers",
+      "nomFr": "Oilers d'Edmonton",
+      "ville": "Edmonton",
+      "pts": 31,
+      "pj": 20
+    },
     {
       "abrev": "CAR",
       "nom": "Carolina Hurricanes",
@@ -18,12 +26,12 @@
       "pj": 20
     },
     {
-      "abrev": "EDM",
-      "nom": "Edmonton Oilers",
-      "nomFr": "Oilers d'Edmonton",
-      "ville": "Edmonton",
-      "pts": 29,
-      "pj": 19
+      "abrev": "VGK",
+      "nom": "Vegas Golden Knights",
+      "nomFr": "Golden Knights de Vegas",
+      "ville": "Vegas",
+      "pts": 28,
+      "pj": 20
     },
     {
       "abrev": "BOS",
@@ -31,6 +39,14 @@
       "nomFr": "Bruins de Boston",
       "ville": "Boston",
       "pts": 27,
+      "pj": 18
+    },
+    {
+      "abrev": "TBL",
+      "nom": "Tampa Bay Lightning",
+      "nomFr": "Lightning de Tampa Bay",
+      "ville": "Tampa Bay",
+      "pts": 26,
       "pj": 18
     },
     {
@@ -42,14 +58,6 @@
       "pj": 18
     },
     {
-      "abrev": "VGK",
-      "nom": "Vegas Golden Knights",
-      "nomFr": "Golden Knights de Vegas",
-      "ville": "Vegas",
-      "pts": 26,
-      "pj": 19
-    },
-    {
       "abrev": "NJD",
       "nom": "New Jersey Devils",
       "nomFr": "Devils du New Jersey",
@@ -58,12 +66,12 @@
       "pj": 19
     },
     {
-      "abrev": "TBL",
-      "nom": "Tampa Bay Lightning",
-      "nomFr": "Lightning de Tampa Bay",
-      "ville": "Tampa Bay",
-      "pts": 24,
-      "pj": 17
+      "abrev": "NSH",
+      "nom": "Nashville Predators",
+      "nomFr": "Predators de Nashville",
+      "ville": "Nashville",
+      "pts": 25,
+      "pj": 19
     },
     {
       "abrev": "COL",
@@ -82,12 +90,12 @@
       "pj": 19
     },
     {
-      "abrev": "NSH",
-      "nom": "Nashville Predators",
-      "nomFr": "Predators de Nashville",
-      "ville": "Nashville",
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
       "pts": 23,
-      "pj": 18
+      "pj": 20
     },
     {
       "abrev": "DAL",
@@ -111,21 +119,13 @@
       "nomFr": "Ducks d'Anaheim",
       "ville": "Anaheim",
       "pts": 21,
-      "pj": 18
+      "pj": 19
     },
     {
       "abrev": "UTA",
       "nom": "Utah Mammoth",
       "nomFr": "Mammoth de l'Utah",
       "ville": "Utah",
-      "pts": 21,
-      "pj": 18
-    },
-    {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
       "pts": 21,
       "pj": 19
     },
@@ -151,7 +151,7 @@
       "nomFr": "Sabres de Buffalo",
       "ville": "Buffalo",
       "pts": 19,
-      "pj": 17
+      "pj": 18
     },
     {
       "abrev": "WPG",
@@ -186,12 +186,20 @@
       "pj": 20
     },
     {
+      "abrev": "SJS",
+      "nom": "San Jose Sharks",
+      "nomFr": "Sharks de San Jose",
+      "ville": "San Jose",
+      "pts": 18,
+      "pj": 21
+    },
+    {
       "abrev": "CGY",
       "nom": "Calgary Flames",
       "nomFr": "Flames de Calgary",
       "ville": "Calgary",
       "pts": 17,
-      "pj": 18
+      "pj": 19
     },
     {
       "abrev": "DET",
@@ -202,20 +210,20 @@
       "pj": 19
     },
     {
-      "abrev": "SJS",
-      "nom": "San Jose Sharks",
-      "nomFr": "Sharks de San Jose",
-      "ville": "San Jose",
-      "pts": 17,
-      "pj": 20
+      "abrev": "PIT",
+      "nom": "Pittsburgh Penguins",
+      "nomFr": "Penguins de Pittsburgh",
+      "ville": "Pittsburgh",
+      "pts": 16,
+      "pj": 19
     },
     {
       "abrev": "PHI",
       "nom": "Philadelphia Flyers",
       "nomFr": "Flyers de Philadelphie",
       "ville": "Philadelphia",
-      "pts": 15,
-      "pj": 20
+      "pts": 16,
+      "pj": 21
     },
     {
       "abrev": "CBJ",
@@ -224,14 +232,6 @@
       "ville": "Columbus",
       "pts": 14,
       "pj": 16
-    },
-    {
-      "abrev": "PIT",
-      "nom": "Pittsburgh Penguins",
-      "nomFr": "Penguins de Pittsburgh",
-      "ville": "Pittsburgh",
-      "pts": 14,
-      "pj": 18
     },
     {
       "abrev": "LAK",
