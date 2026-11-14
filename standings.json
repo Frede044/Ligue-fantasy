@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-11-13T17:26:16Z",
+  "majLe": "2026-11-14T16:15:23Z",
   "equipes": [
     {
       "abrev": "CAR",
@@ -26,6 +26,14 @@
       "pj": 20
     },
     {
+      "abrev": "VGK",
+      "nom": "Vegas Golden Knights",
+      "nomFr": "Golden Knights de Vegas",
+      "ville": "Vegas",
+      "pts": 29,
+      "pj": 21
+    },
+    {
       "abrev": "TBL",
       "nom": "Tampa Bay Lightning",
       "nomFr": "Lightning de Tampa Bay",
@@ -40,14 +48,6 @@
       "ville": "Montréal",
       "pts": 28,
       "pj": 19
-    },
-    {
-      "abrev": "VGK",
-      "nom": "Vegas Golden Knights",
-      "nomFr": "Golden Knights de Vegas",
-      "ville": "Vegas",
-      "pts": 28,
-      "pj": 20
     },
     {
       "abrev": "NJD",
@@ -66,20 +66,20 @@
       "pj": 19
     },
     {
+      "abrev": "NSH",
+      "nom": "Nashville Predators",
+      "nomFr": "Predators de Nashville",
+      "ville": "Nashville",
+      "pts": 27,
+      "pj": 20
+    },
+    {
       "abrev": "OTT",
       "nom": "Ottawa Senators",
       "nomFr": "Sénateurs d'Ottawa",
       "ville": "Ottawa",
       "pts": 26,
       "pj": 20
-    },
-    {
-      "abrev": "NSH",
-      "nom": "Nashville Predators",
-      "nomFr": "Predators de Nashville",
-      "ville": "Nashville",
-      "pts": 25,
-      "pj": 19
     },
     {
       "abrev": "COL",
@@ -90,19 +90,19 @@
       "pj": 20
     },
     {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 25,
+      "pj": 21
+    },
+    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
       "ville": "Florida",
       "pts": 24,
-      "pj": 20
-    },
-    {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
-      "pts": 23,
       "pj": 20
     },
     {
@@ -255,7 +255,7 @@
       "nomFr": "Canucks de Vancouver",
       "ville": "Vancouver",
       "pts": 7,
-      "pj": 20
+      "pj": 21
     }
   ]
 }
