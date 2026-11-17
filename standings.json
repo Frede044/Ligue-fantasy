@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-11-16T19:56:50Z",
+  "majLe": "2026-11-17T18:52:57Z",
   "equipes": [
     {
       "abrev": "EDM",
@@ -50,18 +50,18 @@
       "pj": 20
     },
     {
-      "abrev": "MTL",
-      "nom": "Montréal Canadiens",
-      "nomFr": "Canadiens de Montréal",
-      "ville": "Montréal",
-      "pts": 28,
-      "pj": 20
-    },
-    {
       "abrev": "OTT",
       "nom": "Ottawa Senators",
       "nomFr": "Sénateurs d'Ottawa",
       "ville": "Ottawa",
+      "pts": 28,
+      "pj": 21
+    },
+    {
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
       "pts": 28,
       "pj": 21
     },
@@ -90,6 +90,14 @@
       "pj": 21
     },
     {
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 27,
+      "pj": 22
+    },
+    {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
@@ -106,26 +114,10 @@
       "pj": 20
     },
     {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
-      "pts": 25,
-      "pj": 21
-    },
-    {
       "abrev": "ANA",
       "nom": "Anaheim Ducks",
       "nomFr": "Ducks d'Anaheim",
       "ville": "Anaheim",
-      "pts": 23,
-      "pj": 21
-    },
-    {
-      "abrev": "UTA",
-      "nom": "Utah Mammoth",
-      "nomFr": "Mammoth de l'Utah",
-      "ville": "Utah",
       "pts": 23,
       "pj": 21
     },
@@ -136,6 +128,14 @@
       "ville": "Winnipeg",
       "pts": 23,
       "pj": 21
+    },
+    {
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
+      "pts": 23,
+      "pj": 22
     },
     {
       "abrev": "NYI",
@@ -254,8 +254,8 @@
       "nom": "Vancouver Canucks",
       "nomFr": "Canucks de Vancouver",
       "ville": "Vancouver",
-      "pts": 9,
-      "pj": 22
+      "pts": 11,
+      "pj": 23
     }
   ]
 }
