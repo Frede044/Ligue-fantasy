@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-11-18T18:31:32Z",
+  "majLe": "2026-11-19T12:30:27Z",
   "equipes": [
     {
       "abrev": "EDM",
@@ -34,18 +34,26 @@
       "pj": 21
     },
     {
+      "abrev": "OTT",
+      "nom": "Ottawa Senators",
+      "nomFr": "Sénateurs d'Ottawa",
+      "ville": "Ottawa",
+      "pts": 30,
+      "pj": 22
+    },
+    {
       "abrev": "NJD",
       "nom": "New Jersey Devils",
       "nomFr": "Devils du New Jersey",
       "ville": "New Jersey",
       "pts": 30,
-      "pj": 21
+      "pj": 22
     },
     {
-      "abrev": "OTT",
-      "nom": "Ottawa Senators",
-      "nomFr": "Sénateurs d'Ottawa",
-      "ville": "Ottawa",
+      "abrev": "MTL",
+      "nom": "Montréal Canadiens",
+      "nomFr": "Canadiens de Montréal",
+      "ville": "Montréal",
       "pts": 30,
       "pj": 22
     },
@@ -58,6 +66,14 @@
       "pj": 23
     },
     {
+      "abrev": "BOS",
+      "nom": "Boston Bruins",
+      "nomFr": "Bruins de Boston",
+      "ville": "Boston",
+      "pts": 29,
+      "pj": 22
+    },
+    {
       "abrev": "DAL",
       "nom": "Dallas Stars",
       "nomFr": "Stars de Dallas",
@@ -66,34 +82,18 @@
       "pj": 21
     },
     {
-      "abrev": "MTL",
-      "nom": "Montréal Canadiens",
-      "nomFr": "Canadiens de Montréal",
-      "ville": "Montréal",
-      "pts": 28,
-      "pj": 21
+      "abrev": "NYR",
+      "nom": "New York Rangers",
+      "nomFr": "Rangers de New York",
+      "ville": "NY Rangers",
+      "pts": 27,
+      "pj": 22
     },
     {
       "abrev": "COL",
       "nom": "Colorado Avalanche",
       "nomFr": "Avalanche du Colorado",
       "ville": "Colorado",
-      "pts": 27,
-      "pj": 21
-    },
-    {
-      "abrev": "BOS",
-      "nom": "Boston Bruins",
-      "nomFr": "Bruins de Boston",
-      "ville": "Boston",
-      "pts": 27,
-      "pj": 21
-    },
-    {
-      "abrev": "NYR",
-      "nom": "New York Rangers",
-      "nomFr": "Rangers de New York",
-      "ville": "NY Rangers",
       "pts": 27,
       "pj": 22
     },
@@ -114,6 +114,14 @@
       "pj": 23
     },
     {
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
+      "pts": 25,
+      "pj": 23
+    },
+    {
       "abrev": "NYI",
       "nom": "New York Islanders",
       "nomFr": "Islanders de New York",
@@ -126,14 +134,6 @@
       "nom": "Anaheim Ducks",
       "nomFr": "Ducks d'Anaheim",
       "ville": "Anaheim",
-      "pts": 23,
-      "pj": 22
-    },
-    {
-      "abrev": "UTA",
-      "nom": "Utah Mammoth",
-      "nomFr": "Mammoth de l'Utah",
-      "ville": "Utah",
       "pts": 23,
       "pj": 22
     },
@@ -207,7 +207,7 @@
       "nomFr": "Red Wings de Detroit",
       "ville": "Detroit",
       "pts": 19,
-      "pj": 21
+      "pj": 22
     },
     {
       "abrev": "TOR",
