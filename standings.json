@@ -1,5 +1,5 @@
 {
-  "majLe": "2026-11-24T20:26:25Z",
+  "majLe": "2026-11-25T19:40:46Z",
   "equipes": [
     {
       "abrev": "MIN",
@@ -23,7 +23,7 @@
       "nomFr": "Oilers d'Edmonton",
       "ville": "Edmonton",
       "pts": 38,
-      "pj": 26
+      "pj": 27
     },
     {
       "abrev": "OTT",
@@ -38,8 +38,8 @@
       "nom": "Vegas Golden Knights",
       "nomFr": "Golden Knights de Vegas",
       "ville": "Vegas",
-      "pts": 33,
-      "pj": 25
+      "pts": 35,
+      "pj": 26
     },
     {
       "abrev": "TBL",
