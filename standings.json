@@ -1,21 +1,21 @@
 {
-  "majLe": "2026-11-25T19:40:46Z",
+  "majLe": "2026-11-26T19:21:45Z",
   "equipes": [
+    {
+      "abrev": "CAR",
+      "nom": "Carolina Hurricanes",
+      "nomFr": "Hurricanes de la Caroline",
+      "ville": "Carolina",
+      "pts": 41,
+      "pj": 25
+    },
     {
       "abrev": "MIN",
       "nom": "Minnesota Wild",
       "nomFr": "Wild du Minnesota",
       "ville": "Minnesota",
       "pts": 41,
-      "pj": 26
-    },
-    {
-      "abrev": "CAR",
-      "nom": "Carolina Hurricanes",
-      "nomFr": "Hurricanes de la Caroline",
-      "ville": "Carolina",
-      "pts": 39,
-      "pj": 24
+      "pj": 27
     },
     {
       "abrev": "EDM",
@@ -31,7 +31,7 @@
       "nomFr": "Sénateurs d'Ottawa",
       "ville": "Ottawa",
       "pts": 35,
-      "pj": 25
+      "pj": 26
     },
     {
       "abrev": "VGK",
@@ -42,26 +42,26 @@
       "pj": 26
     },
     {
+      "abrev": "NJD",
+      "nom": "New Jersey Devils",
+      "nomFr": "Devils du New Jersey",
+      "ville": "New Jersey",
+      "pts": 34,
+      "pj": 25
+    },
+    {
       "abrev": "TBL",
       "nom": "Tampa Bay Lightning",
       "nomFr": "Lightning de Tampa Bay",
       "ville": "Tampa Bay",
       "pts": 32,
-      "pj": 23
+      "pj": 24
     },
     {
       "abrev": "DAL",
       "nom": "Dallas Stars",
       "nomFr": "Stars de Dallas",
       "ville": "Dallas",
-      "pts": 32,
-      "pj": 23
-    },
-    {
-      "abrev": "NJD",
-      "nom": "New Jersey Devils",
-      "nomFr": "Devils du New Jersey",
-      "ville": "New Jersey",
       "pts": 32,
       "pj": 24
     },
@@ -71,7 +71,15 @@
       "nomFr": "Canadiens de Montréal",
       "ville": "Montréal",
       "pts": 32,
-      "pj": 25
+      "pj": 26
+    },
+    {
+      "abrev": "COL",
+      "nom": "Colorado Avalanche",
+      "nomFr": "Avalanche du Colorado",
+      "ville": "Colorado",
+      "pts": 31,
+      "pj": 24
     },
     {
       "abrev": "BOS",
@@ -79,29 +87,37 @@
       "nomFr": "Bruins de Boston",
       "ville": "Boston",
       "pts": 31,
-      "pj": 23
-    },
-    {
-      "abrev": "COL",
-      "nom": "Colorado Avalanche",
-      "nomFr": "Avalanche du Colorado",
-      "ville": "Colorado",
-      "pts": 29,
-      "pj": 23
+      "pj": 24
     },
     {
       "abrev": "NSH",
       "nom": "Nashville Predators",
       "nomFr": "Predators de Nashville",
       "ville": "Nashville",
-      "pts": 29,
-      "pj": 23
+      "pts": 31,
+      "pj": 24
     },
     {
       "abrev": "FLA",
       "nom": "Florida Panthers",
       "nomFr": "Panthers de la Floride",
       "ville": "Florida",
+      "pts": 31,
+      "pj": 25
+    },
+    {
+      "abrev": "WPG",
+      "nom": "Winnipeg Jets",
+      "nomFr": "Jets de Winnipeg",
+      "ville": "Winnipeg",
+      "pts": 30,
+      "pj": 26
+    },
+    {
+      "abrev": "NYI",
+      "nom": "New York Islanders",
+      "nomFr": "Islanders de New York",
+      "ville": "NY Islanders",
       "pts": 29,
       "pj": 24
     },
@@ -110,16 +126,16 @@
       "nom": "St. Louis Blues",
       "nomFr": "Blues de St. Louis",
       "ville": "St. Louis",
-      "pts": 28,
-      "pj": 24
+      "pts": 29,
+      "pj": 25
     },
     {
-      "abrev": "WPG",
-      "nom": "Winnipeg Jets",
-      "nomFr": "Jets de Winnipeg",
-      "ville": "Winnipeg",
-      "pts": 28,
-      "pj": 25
+      "abrev": "UTA",
+      "nom": "Utah Mammoth",
+      "nomFr": "Mammoth de l'Utah",
+      "ville": "Utah",
+      "pts": 29,
+      "pj": 26
     },
     {
       "abrev": "NYR",
@@ -127,31 +143,31 @@
       "nomFr": "Rangers de New York",
       "ville": "NY Rangers",
       "pts": 27,
-      "pj": 23
-    },
-    {
-      "abrev": "NYI",
-      "nom": "New York Islanders",
-      "nomFr": "Islanders de New York",
-      "ville": "NY Islanders",
-      "pts": 27,
-      "pj": 23
-    },
-    {
-      "abrev": "UTA",
-      "nom": "Utah Mammoth",
-      "nomFr": "Mammoth de l'Utah",
-      "ville": "Utah",
-      "pts": 27,
-      "pj": 25
+      "pj": 24
     },
     {
       "abrev": "BUF",
       "nom": "Buffalo Sabres",
       "nomFr": "Sabres de Buffalo",
       "ville": "Buffalo",
+      "pts": 26,
+      "pj": 25
+    },
+    {
+      "abrev": "ANA",
+      "nom": "Anaheim Ducks",
+      "nomFr": "Ducks d'Anaheim",
+      "ville": "Anaheim",
+      "pts": 25,
+      "pj": 26
+    },
+    {
+      "abrev": "CGY",
+      "nom": "Calgary Flames",
+      "nomFr": "Flames de Calgary",
+      "ville": "Calgary",
       "pts": 24,
-      "pj": 24
+      "pj": 26
     },
     {
       "abrev": "PHI",
@@ -159,7 +175,7 @@
       "nomFr": "Flyers de Philadelphie",
       "ville": "Philadelphia",
       "pts": 24,
-      "pj": 26
+      "pj": 27
     },
     {
       "abrev": "SJS",
@@ -167,7 +183,7 @@
       "nomFr": "Sharks de San Jose",
       "ville": "San Jose",
       "pts": 24,
-      "pj": 26
+      "pj": 27
     },
     {
       "abrev": "SEA",
@@ -175,23 +191,23 @@
       "nomFr": "Kraken de Seattle",
       "ville": "Seattle",
       "pts": 23,
-      "pj": 21
+      "pj": 22
     },
     {
-      "abrev": "ANA",
-      "nom": "Anaheim Ducks",
-      "nomFr": "Ducks d'Anaheim",
-      "ville": "Anaheim",
-      "pts": 23,
-      "pj": 25
-    },
-    {
-      "abrev": "CGY",
-      "nom": "Calgary Flames",
-      "nomFr": "Flames de Calgary",
-      "ville": "Calgary",
+      "abrev": "WSH",
+      "nom": "Washington Capitals",
+      "nomFr": "Capitals de Washington",
+      "ville": "Washington",
       "pts": 22,
-      "pj": 25
+      "pj": 22
+    },
+    {
+      "abrev": "DET",
+      "nom": "Detroit Red Wings",
+      "nomFr": "Red Wings de Detroit",
+      "ville": "Detroit",
+      "pts": 21,
+      "pj": 24
     },
     {
       "abrev": "TOR",
@@ -202,18 +218,18 @@
       "pj": 26
     },
     {
-      "abrev": "WSH",
-      "nom": "Washington Capitals",
-      "nomFr": "Capitals de Washington",
-      "ville": "Washington",
+      "abrev": "CHI",
+      "nom": "Chicago Blackhawks",
+      "nomFr": "Blackhawks de Chicago",
+      "ville": "Chicago",
       "pts": 20,
-      "pj": 21
+      "pj": 25
     },
     {
-      "abrev": "DET",
-      "nom": "Detroit Red Wings",
-      "nomFr": "Red Wings de Detroit",
-      "ville": "Detroit",
+      "abrev": "CBJ",
+      "nom": "Columbus Blue Jackets",
+      "nomFr": "Blue Jackets de Columbus",
+      "ville": "Columbus",
       "pts": 19,
       "pj": 23
     },
@@ -226,28 +242,12 @@
       "pj": 22
     },
     {
-      "abrev": "CBJ",
-      "nom": "Columbus Blue Jackets",
-      "nomFr": "Blue Jackets de Columbus",
-      "ville": "Columbus",
-      "pts": 18,
-      "pj": 22
-    },
-    {
-      "abrev": "CHI",
-      "nom": "Chicago Blackhawks",
-      "nomFr": "Blackhawks de Chicago",
-      "ville": "Chicago",
-      "pts": 18,
-      "pj": 24
-    },
-    {
       "abrev": "PIT",
       "nom": "Pittsburgh Penguins",
       "nomFr": "Penguins de Pittsburgh",
       "ville": "Pittsburgh",
       "pts": 16,
-      "pj": 23
+      "pj": 24
     },
     {
       "abrev": "VAN",
@@ -255,7 +255,7 @@
       "nomFr": "Canucks de Vancouver",
       "ville": "Vancouver",
       "pts": 13,
-      "pj": 26
+      "pj": 27
     }
   ]
 }
